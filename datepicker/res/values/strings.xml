@@ -21,6 +21,7 @@
     <string name="botao_0">0</string>
     <string name="botao_mais_1d">+1d</string>
     <string name="botao_mais_1a">+1a</string>
-    <string name="botao_ok">Ok</string>
+    <string name="botao_ok">OK</string>
+    <string name="title_activity_date">DateActivity</string>
 
 </resources>
