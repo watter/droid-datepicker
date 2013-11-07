@@ -9,7 +9,7 @@
   <!-- Specify a dark green border -->
   <stroke 
     android:width="4dp"
-    android:color="#43ff01" />
+    android:color="#1f6108" />
   
   <!-- Specify the margins that all content inside the drawable must adhere to 
   <padding
