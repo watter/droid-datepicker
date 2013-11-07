@@ -4,7 +4,8 @@
   android:shape="rectangle">
   
   <!-- Specify a semi-transparent solid green background color -->
-  <solid android:color="#fffb00" />
+  <!--  solid android:color="#fffb00" /  -->
+  <solid android:color="#ffa700" />
   
   <!-- Specify a dark green border -->
   <stroke 
