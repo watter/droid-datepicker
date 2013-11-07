@@ -108,6 +108,7 @@
         android:id="@+id/tableRow2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:top="15dp"
         android:gravity="center_horizontal" >
 
         <Button
