@@ -14,94 +14,135 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
-        <EditText
-            android:id="@+id/editText_d1"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/button_d1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/blue"
-            android:ems="10"
-            android:inputType="number" >
+            android:background="@drawable/day_selector"
+            android:nextFocusUp="@+id/button_ok"
+        	android:nextFocusLeft="@+id/button_ok"
+        	android:nextFocusRight="@+id/button_d2"
+        	android:nextFocusDown="@+id/button_d2"
+             />
 
-            <requestFocus />
-        </EditText>
-
-        <EditText
-            android:id="@+id/editText_d2"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/button_d2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/blue"
-            android:ems="10"
-            android:inputType="number" />
+            android:background="@drawable/day_selector"
+            android:layout_marginLeft="5dp"
+            android:nextFocusUp="@+id/button_d1"
+        	android:nextFocusLeft="@+id/button_d1"
+        	android:nextFocusRight="@+id/button_m1"
+        	android:nextFocusDown="@+id/button_m1"
+            />
 
         <TextView
-            android:id="@+id/textView_b1"
+            android:id="@+id/textView_bb1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/separador_data"
+            android:layout_marginLeft="2dp"
             android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <EditText
-            android:id="@+id/editText_m1"
-            android:layout_width="wrap_content"
+        
+        
+        <Button
+            android:id="@+id/button_m1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/green"
-            android:ems="10"
-            android:inputType="number" />
-
-        <EditText
-            android:id="@+id/editText_m2"
-            android:layout_width="wrap_content"
+            android:background="@drawable/month_selector"
+            android:nextFocusUp="@+id/button_d2"
+        	android:nextFocusLeft="@+id/button_d2"
+        	android:nextFocusRight="@+id/button_m2"
+        	android:nextFocusDown="@+id/button_m2"
+             />
+                
+        <Button
+            android:id="@+id/button_m2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/green"
-            android:ems="10"
-            android:inputType="number" />
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/month_selector"
+            android:nextFocusUp="@+id/button_m1"
+        	android:nextFocusLeft="@+id/button_m1"
+        	android:nextFocusRight="@+id/button_y1"
+        	android:nextFocusDown="@+id/button_y1"
+             />
 
         <TextView
-            android:id="@+id/textView_b2"
+            android:id="@+id/textView_bb2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/separador_data"
+            android:layout_marginLeft="5dp"
             android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <EditText
-            android:id="@+id/editText_y1"
-            android:layout_width="wrap_content"
+        
+        
+        <Button
+            android:id="@+id/button_y1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/orange"
-            android:ems="10"
-            android:inputType="number" />
+            android:background="@drawable/year_selector"
+            android:nextFocusUp="@+id/button_m2"
+        	android:nextFocusLeft="@+id/button_m2"
+        	android:nextFocusRight="@+id/button_y2"
+        	android:nextFocusDown="@+id/button_y2"
+             />
 
-        <EditText
-            android:id="@+id/editText_y2"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/button_y2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/orange"
-            android:ems="10"
-            android:inputType="number" />
-
-        <EditText
-            android:id="@+id/editText_y3"
-            android:layout_width="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/year_selector"
+            android:nextFocusUp="@+id/button_y1"
+        	android:nextFocusLeft="@+id/button_y1"
+        	android:nextFocusRight="@+id/button_y3"
+        	android:nextFocusDown="@+id/button_y3"
+             />
+        
+        <Button
+            android:id="@+id/button_y3"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/orange"
-            android:ems="10"
-            android:inputType="number" />
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/year_selector"
+            android:nextFocusUp="@+id/button_y2"
+        	android:nextFocusLeft="@+id/button_y2"
+        	android:nextFocusRight="@+id/button_y4"
+        	android:nextFocusDown="@+id/button_y4"
+             />
 
-        <EditText
-            android:id="@+id/editText_y4"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/button_y4"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/orange"
-            android:ems="10"
-            android:inputType="number" />
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/year_selector"
+            android:nextFocusUp="@+id/button_y3"
+        	android:nextFocusLeft="@+id/button_y3"
+        	android:nextFocusRight="@+id/button_ok"
+        	android:nextFocusDown="@+id/button_ok"
+             />
+        
+       
+        
     </TableRow>
 
     <TableRow
@@ -118,6 +159,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="onClickButton1"
             android:text="@string/botao_1" />
 
         <Button
@@ -126,6 +168,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="onClickButton2"
             android:text="@string/botao_2" />
 
         <Button
@@ -134,6 +177,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="onClickButton3"
             android:text="@string/botao_3" />
 
         <Button
@@ -143,6 +187,7 @@
             android:layout_height="45dp"
             android:layout_weight="1"
             android:background="@drawable/month_button"
+            android:onClick="onClickButtonMin1m"
             android:text="@string/botao_menos_1m" />
     </TableRow>
 
@@ -158,6 +203,7 @@
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
+            android:onClick="onClickButton4"
             android:text="@string/botao_4" />
 
         <Button
@@ -166,6 +212,7 @@
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
+            android:onClick="onClickButton5"
             android:text="@string/botao_5" />
 
         <Button
@@ -174,6 +221,7 @@
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
+            android:onClick="onClickButton6"
             android:text="@string/botao_6" />
 
         <Button
@@ -183,6 +231,7 @@
             android:layout_height="45dp"
             android:layout_weight="1"
             android:background="@drawable/month_button"
+            android:onClick="onClickButtonPlus1m"
             android:text="@string/botao_mais_1m" />
     </TableRow>
 
@@ -207,6 +256,7 @@
            android:layout_width="0dp"
            android:layout_height="45dp"
            android:layout_weight="1"
+           android:onClick="onClickButton8"
            android:text="@string/botao_8" />
 
        <Button
@@ -215,6 +265,7 @@
            android:layout_width="0dp"
            android:layout_height="45dp"
            android:layout_weight="1"
+           android:onClick="onClickButton9"
            android:text="@string/botao_9" />
 
        <Button
@@ -224,6 +275,7 @@
            android:layout_height="45dp"
            android:layout_weight="1"
            android:background="@drawable/year_button"
+           android:onClick="onClickButtonMin1a"
            android:text="@string/botao_menos_1a" />
    </TableRow>
 
@@ -240,6 +292,7 @@
     	        android:layout_height="45dp"
 	            android:layout_weight="1"
                 android:background="@drawable/day_button"
+                android:onClick="onClickButtonMin1d"
                 android:text="@string/botao_menos_1d" />
 
             <Button
@@ -248,6 +301,7 @@
                 android:layout_width="0dp"
     	        android:layout_height="45dp"
 	            android:layout_weight="1"
+	            android:onClick="onClickButton0"
                 android:text="@string/botao_0" />
 
             <Button
@@ -257,6 +311,7 @@
     	        android:layout_height="45dp"
 	            android:layout_weight="1"
                 android:background="@drawable/day_button"
+                android:onClick="onClickButtonPlus1d"
                 android:text="@string/botao_mais_1d" />
 
             <Button
@@ -266,6 +321,7 @@
     	        android:layout_height="45dp"
 	            android:layout_weight="1"
                 android:background="@drawable/year_button"
+                android:onClick="onClickButtonPlus1y"
                 android:text="@string/botao_mais_1a" />
        
    </TableRow>
@@ -281,113 +337,11 @@
                 android:layout_width="0dp"
     	        android:layout_height="45dp"
 	            android:layout_weight="1"
-				android:background="@drawable/blue"	       
+				android:background="@drawable/black"	       
 	            android:text="@string/botao_ok"
-            android:top="55dp" />
+	            android:top="55dp" />
        
        
        
    </TableRow>
-
-   <TableRow
-       android:id="@+id/tableRow7"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content" >
-               
-        <Button
-            android:id="@+id/button_d1"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/day_selector"
-             />
-
-        <Button
-            android:id="@+id/button_d2"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/blue_underline"
-            android:layout_marginLeft="5dp"
-            android:text="@string/botao_1" />
-
-        <TextView
-            android:id="@+id/textView_bb1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/separador_data"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-        
-        
-        <Button
-            android:id="@+id/button_m1"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/green"
-            android:text="@string/botao_1" />
-                
-        <Button
-            android:id="@+id/button_m2"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/green"
-            android:text="@string/botao_1" />
-
-        <TextView
-            android:id="@+id/textView_bb2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/separador_data"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-        
-        
-        
-        <Button
-            android:id="@+id/button_y1"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/orange"
-            android:text="@string/botao_1" />
-
-        <Button
-            android:id="@+id/button_y2"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/orange"
-            android:text="@string/botao_1" />
-        
-        <Button
-            android:id="@+id/button_y3"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/orange"
-            android:text="@string/botao_1" />
-
-        <Button
-            android:id="@+id/button_y4"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/orange"
-            android:text="@string/botao_1" />
-        
-        
-        
-       
-   </TableRow>
-
 </TableLayout>
