@@ -25,7 +25,7 @@
         	android:nextFocusLeft="@+id/button_ok"
         	android:nextFocusRight="@+id/button_d2"
         	android:nextFocusDown="@+id/button_d2"
-             />
+        	/>
 
         <Button
             android:id="@+id/button_d2"
@@ -275,7 +275,7 @@
            android:layout_height="45dp"
            android:layout_weight="1"
            android:background="@drawable/year_button"
-           android:onClick="onClickButtonMin1a"
+           android:onClick="onClickButtonMin1y"
            android:text="@string/botao_menos_1a" />
    </TableRow>
 
