@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
 public class DateActivity extends Activity {
@@ -40,8 +41,9 @@ public class DateActivity extends Activity {
 
 	
 	public void onClickButton1(View v){
-		Button botao = (Button) findViewById(R.id.button_d2);
-		botao.setText("7");
+
+		Button botao = (Button) findViewById(R.id.button_d1);
+		botao.setText("1");
 	
 	}
 

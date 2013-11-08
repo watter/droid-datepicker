@@ -25,7 +25,10 @@
         	android:nextFocusLeft="@+id/button_ok"
         	android:nextFocusRight="@+id/button_d2"
         	android:nextFocusDown="@+id/button_d2"
-        	/>
+        	>
+        		<!-- pede o foco para esse botão -->
+        		<requestFocus />
+       	</Button>
 
         <Button
             android:id="@+id/button_d2"
