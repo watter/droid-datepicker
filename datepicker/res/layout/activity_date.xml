@@ -109,6 +109,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:top="15dp"
+        android:layout_marginTop="10dp"
         android:gravity="center_horizontal" >
 
         <Button
@@ -197,6 +198,7 @@
            android:layout_width="0dp"
            android:layout_height="45dp"
            android:layout_weight="1"
+           android:onClick="onClickButton7"
            android:text="@string/botao_7" />
 
        <Button
@@ -279,10 +281,109 @@
                 android:layout_width="0dp"
     	        android:layout_height="45dp"
 	            android:layout_weight="1"
-            android:text="@string/botao_ok"
+				android:background="@drawable/blue"	       
+	            android:text="@string/botao_ok"
             android:top="55dp" />
        
        
+       
+   </TableRow>
+
+   <TableRow
+       android:id="@+id/tableRow7"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" >
+               
+        <Button
+            android:id="@+id/button_d1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+             />
+
+        <Button
+            android:id="@+id/button_d2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_underline"
+            android:text="@string/botao_1" />
+
+        <TextView
+            android:id="@+id/textView_bb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/separador_data"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        
+        
+        <Button
+            android:id="@+id/button_m1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/green"
+            android:text="@string/botao_1" />
+                
+        <Button
+            android:id="@+id/button_m2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/green"
+            android:text="@string/botao_1" />
+
+        <TextView
+            android:id="@+id/textView_bb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/separador_data"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        
+        
+        
+        <Button
+            android:id="@+id/button_y1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/orange"
+            android:text="@string/botao_1" />
+
+        <Button
+            android:id="@+id/button_y2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/orange"
+            android:text="@string/botao_1" />
+        
+        <Button
+            android:id="@+id/button_y3"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/orange"
+            android:text="@string/botao_1" />
+
+        <Button
+            android:id="@+id/button_y4"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/orange"
+            android:text="@string/botao_1" />
+        
+        
+        
        
    </TableRow>
 

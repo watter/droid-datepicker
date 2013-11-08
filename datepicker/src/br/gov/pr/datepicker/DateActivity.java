@@ -3,6 +3,9 @@ package br.gov.pr.datepicker;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class DateActivity extends Activity {
 
@@ -19,4 +22,12 @@ public class DateActivity extends Activity {
 		return true;
 	}
 
+	public void onClickButton7(View v){
+		Button botao = (Button) findViewById(R.id.button_d2);
+		botao.setText("7");
+
+		EditText edtd1 = (EditText) findViewById(R.id.editText_d1);
+		edtd1.setText("7");
+
+	}
 }

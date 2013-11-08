@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+   
+    <!--  Define o 1o quadrado que será escondido pelo 2o, abaixo -->
+   <item>
+      <shape 
+        android:shape="rectangle">
+            <stroke android:width="2dp" android:color="#0092ff" />
+            <solid android:color="#fff" />
+
+        </shape>
+   </item>
+    
+   <!--  segundo quadrado que esconde com branco o 1o quadrado  -->
+   <item android:top="0dp" android:bottom="5dp"> 
+      <shape 
+        android:shape="rectangle">
+            <stroke android:width="2dp" android:color="#fff" />
+            <solid android:color="#fff" />
+        </shape>
+   </item>
+
+   
+   
+   
+   
+</layer-list>
