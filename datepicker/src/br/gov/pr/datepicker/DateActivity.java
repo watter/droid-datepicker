@@ -23,9 +23,7 @@ public class DateActivity extends Activity {
         button.setFocusable(true);
         button.setFocusableInTouchMode(true);///add this line
         button.requestFocus();
-        
-        */
-
+        */        
 	}
 
 	@Override
@@ -41,64 +39,92 @@ public class DateActivity extends Activity {
 
 	
 	public void onClickButton1(View v){
-
-		Button botao = (Button) findViewById(R.id.button_d1);
+		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
 		botao.setText("1");
-	
 	}
 
 	
 	public void onClickButton2(View v){
-		Context context = getApplicationContext();
-		CharSequence text = "1";
-		int duration = Toast.LENGTH_SHORT;
-		Toast toast = Toast.makeText(context, text, duration);
-		toast.show();
+		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
+		botao.setText("2");
 	}
 	
 	public void onClickButton3(View v){
+		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
+		botao.setText("3");
+
 	}
 
 	public void onClickButton4(View v){
+		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
+		botao.setText("4");
+
 	}
 
 	public void onClickButton5(View v){
+		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
+		botao.setText("5");
+
 	}
 
 	public void onClickButton6(View v){
+		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
+		botao.setText("6");
+
 	}
 
 	public void onClickButton7(View v){
-		Button botao = (Button) findViewById(R.id.button_d2);
+		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
 		botao.setText("7");
-	
 	}
 	
 	public void onClickButton8(View v){
+		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
+		botao.setText("8");
 	}
 
 	public void onClickButton9(View v){
+		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
+		botao.setText("9");
 	}
 	
 	public void onClickButton0(View v){
+		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
+		botao.setText("0");
 	}
 
 	public void onClickButtonMin1d(View v){
+		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
+		botao.setText("99");
+
 	}
 
 	public void onClickButtonMin1m(View v){
+		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
+		botao.setText("88");
 	}
 	
 	public void onClickButtonMin1y(View v){
+		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
+		botao.setText("77");
+
 	}
 	
 	public void onClickButtonPlus1d(View v){
+		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
+		botao.setText("66");
+
 	}
 
 	public void onClickButtonPlus1m(View v){
+		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
+		botao.setText("55");
 	}
 	
 	public void onClickButtonPlus1y(View v){
+		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
+		botao.setText("44");
+
 	}
 
 
