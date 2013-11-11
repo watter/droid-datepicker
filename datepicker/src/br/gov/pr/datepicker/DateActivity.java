@@ -162,10 +162,21 @@ public class DateActivity extends Activity {
 		Button btn_d1 = (Button) findViewById(R.id.button_d1);  
 		Button btn_d2 = (Button) findViewById(R.id.button_d2);  
 
+		// recupera o valor dos dias e decrementa 
+		
 		int decday = Integer.parseInt((String) btn_d1.getText() + (String) btn_d2.getText());
 		decday = decday-1;
 		
-		String strdecday = String.valueOf(decday);
+		// testa o valor do dia, onde o menor dia é dia 01 
+		String strdecday ="01";
+		
+		if (decday < 1){
+			strdecday = "01";
+		}else if (decday < 10){
+			strdecday = "0" + String.valueOf(decday);
+		}else{
+			strdecday = String.valueOf(decday);
+		}
 
 		// Atribui os valores
 		
@@ -189,8 +200,33 @@ public class DateActivity extends Activity {
 	}
 	
 	public void onClickButtonPlus1d(View v){
-		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
-		botao.setText("66");
+
+		Button btn_d1 = (Button) findViewById(R.id.button_d1);  
+		Button btn_d2 = (Button) findViewById(R.id.button_d2);  
+
+		// recupera o valor dos dias e decrementa 
+		
+		int incday = Integer.parseInt((String) btn_d1.getText() + (String) btn_d2.getText());
+		incday = incday+1;
+		
+		// testa o valor do dia, onde o menor dia é dia 01 
+		String strincday ="31";
+		
+		if (incday > 31){
+			strincday = "31";
+		}else if (incday < 10){
+			strincday = "0" + String.valueOf(incday);
+		}else{
+			strincday = String.valueOf(incday);
+		}
+
+		// Atribui os valores
+		
+		Button botao = (Button)findViewById(R.id.button_d1);
+		botao.setText(strincday.subSequence(0, 1));
+		
+		botao = (Button)findViewById(R.id.button_d2);
+		botao.setText(strincday.subSequence(1, 2));
 
 	}
 
