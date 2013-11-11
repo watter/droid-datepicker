@@ -158,8 +158,22 @@ public class DateActivity extends Activity {
 	}
 
 	public void onClickButtonMin1d(View v){
-		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
-		botao.setText("99");
+		
+		Button btn_d1 = (Button) findViewById(R.id.button_d1);  
+		Button btn_d2 = (Button) findViewById(R.id.button_d2);  
+
+		int decday = Integer.parseInt((String) btn_d1.getText() + (String) btn_d2.getText());
+		decday = decday-1;
+		
+		String strdecday = String.valueOf(decday);
+
+		// Atribui os valores
+		
+		Button botao = (Button)findViewById(R.id.button_d1);
+		botao.setText(strdecday.subSequence(0, 1));
+		
+		botao = (Button)findViewById(R.id.button_d2);
+		botao.setText(strdecday.subSequence(1, 2));
 
 	}
 
