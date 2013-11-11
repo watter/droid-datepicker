@@ -25,11 +25,13 @@
         	android:nextFocusLeft="@+id/button_ok"
         	android:nextFocusRight="@+id/button_d2"
         	android:nextFocusDown="@+id/button_d2"
+        	android:nextFocusForward="@+id/button_d2"
         	android:focusable="true" 
         	android:focusableInTouchMode="true"
+        	android:maxLength="1"
+        	
         	>
         		<!-- pede o foco para esse botão -->
-        		<requestFocus />
        	</Button>
 
         <Button
@@ -44,8 +46,10 @@
         	android:nextFocusLeft="@+id/button_d1"
         	android:nextFocusRight="@+id/button_m1"
         	android:nextFocusDown="@+id/button_m1"
+        	android:nextFocusForward="@+id/button_m1"
         	android:focusable="true" 
         	android:focusableInTouchMode="true"
+        	android:maxLength="1"
             />
 
         <TextView
@@ -68,6 +72,7 @@
         	android:nextFocusLeft="@+id/button_d2"
         	android:nextFocusRight="@+id/button_m2"
         	android:nextFocusDown="@+id/button_m2"
+        	android:nextFocusForward="@+id/button_m2"
         	android:focusable="true" 
         	android:focusableInTouchMode="true"
              />
@@ -84,6 +89,7 @@
         	android:nextFocusLeft="@+id/button_m1"
         	android:nextFocusRight="@+id/button_y1"
         	android:nextFocusDown="@+id/button_y1"
+        	android:nextFocusForward="@+id/button_y1"
         	android:focusable="true" 
         	android:focusableInTouchMode="true"
              />
@@ -108,6 +114,7 @@
         	android:nextFocusLeft="@+id/button_m2"
         	android:nextFocusRight="@+id/button_y2"
         	android:nextFocusDown="@+id/button_y2"
+        	android:nextFocusForward="@+id/button_y2"
         	android:focusable="true" 
         	android:focusableInTouchMode="true"
              />
@@ -124,6 +131,7 @@
         	android:nextFocusLeft="@+id/button_y1"
         	android:nextFocusRight="@+id/button_y3"
         	android:nextFocusDown="@+id/button_y3"
+        	android:nextFocusForward="@+id/button_y3"
         	android:focusable="true" 
         	android:focusableInTouchMode="true"
              />
@@ -140,6 +148,7 @@
         	android:nextFocusLeft="@+id/button_y2"
         	android:nextFocusRight="@+id/button_y4"
         	android:nextFocusDown="@+id/button_y4"
+        	android:nextFocusForward="@+id/button_y4"
         	android:focusable="true" 
         	android:focusableInTouchMode="true"
              />
@@ -156,11 +165,11 @@
         	android:nextFocusLeft="@+id/button_y3"
         	android:nextFocusRight="@+id/button_ok"
         	android:nextFocusDown="@+id/button_ok"
+        	android:nextFocusForward="@+id/button_ok"
         	android:focusable="true" 
         	android:focusableInTouchMode="true"
              />
-        
-       
+   
         
     </TableRow>
 
