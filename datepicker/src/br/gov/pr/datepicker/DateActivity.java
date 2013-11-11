@@ -189,13 +189,68 @@ public class DateActivity extends Activity {
 	}
 
 	public void onClickButtonMin1m(View v){
-		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
-		botao.setText("88");
+		Button btn_m1 = (Button) findViewById(R.id.button_m1);  
+		Button btn_m2 = (Button) findViewById(R.id.button_m2);  
+
+		// recupera o valor dos dias e decrementa 
+		
+		int decmonth = Integer.parseInt((String) btn_m1.getText() + (String) btn_m2.getText());
+		decmonth = decmonth-1;
+		
+		// testa o valor do dia, onde o menor dia é dia 01 
+		String strdecmonth ="01";
+		
+		if (decmonth < 1){
+			strdecmonth = "01";
+		}else if (decmonth < 10){
+			strdecmonth = "0" + String.valueOf(decmonth);
+		}else{
+			strdecmonth = String.valueOf(decmonth);
+		}
+
+		// Atribui os valores
+		
+		Button botao = (Button)findViewById(R.id.button_m1);
+		botao.setText(strdecmonth.subSequence(0, 1));
+		
+		botao = (Button)findViewById(R.id.button_m2);
+		botao.setText(strdecmonth.subSequence(1, 2));
 	}
 	
 	public void onClickButtonMin1y(View v){
-		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
-		botao.setText("77");
+		Button btn_y1 = (Button) findViewById(R.id.button_y1);  
+		Button btn_y2 = (Button) findViewById(R.id.button_y2);  
+		Button btn_y3 = (Button) findViewById(R.id.button_y3);  
+		Button btn_y4 = (Button) findViewById(R.id.button_y4);  
+
+		// recupera o valor dos dias e decrementa 
+		
+		int decyear = Integer.parseInt((String) btn_y1.getText() + (String) btn_y2.getText() + (String) btn_y3.getText() + (String) btn_y4.getText());
+		decyear = decyear-1;
+		
+		// testa o valor do dia, onde o menor dia é dia 01 
+		String strdecyear = "2013";
+		
+		if (decyear < 1000){
+			strdecyear = "0" + String.valueOf(decyear);
+		}else{
+			strdecyear = String.valueOf(decyear);
+		}
+
+		// Atribui os valores
+		
+		Button botao = (Button)findViewById(R.id.button_y1);
+		botao.setText(strdecyear.subSequence(0, 1));
+		
+		botao = (Button)findViewById(R.id.button_y2);
+		botao.setText(strdecyear.subSequence(1, 2));
+
+		botao = (Button)findViewById(R.id.button_y3);
+		botao.setText(strdecyear.subSequence(2, 3));
+		
+		botao = (Button)findViewById(R.id.button_y4);
+		botao.setText(strdecyear.subSequence(3, 4));
+
 
 	}
 	
@@ -231,14 +286,69 @@ public class DateActivity extends Activity {
 	}
 
 	public void onClickButtonPlus1m(View v){
-		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
-		botao.setText("55");
+
+		Button btn_m1 = (Button) findViewById(R.id.button_m1);  
+		Button btn_m2 = (Button) findViewById(R.id.button_m2);  
+
+		// recupera o valor dos dias e decrementa 
+		
+		int incmonth = Integer.parseInt((String) btn_m1.getText() + (String) btn_m2.getText());
+		incmonth = incmonth+1;
+		
+		// testa o valor do dia, onde o menor dia é dia 01 
+		String strincmonth ="12";
+		
+		if (incmonth > 12){
+			strincmonth = "12";
+		}else if (incmonth < 10){
+			strincmonth = "0" + String.valueOf(incmonth);
+		}else{
+			strincmonth = String.valueOf(incmonth);
+		}
+
+		// Atribui os valores
+		
+		Button botao = (Button)findViewById(R.id.button_m1);
+		botao.setText(strincmonth.subSequence(0, 1));
+		
+		botao = (Button)findViewById(R.id.button_m2);
+		botao.setText(strincmonth.subSequence(1, 2));
 	}
 	
 	public void onClickButtonPlus1y(View v){
 
-		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
-		botao.setText("55");
+		Button btn_y1 = (Button) findViewById(R.id.button_y1);  
+		Button btn_y2 = (Button) findViewById(R.id.button_y2);  
+		Button btn_y3 = (Button) findViewById(R.id.button_y3);  
+		Button btn_y4 = (Button) findViewById(R.id.button_y4);  
+
+		// recupera o valor dos dias e decrementa 
+		
+		int incyear = Integer.parseInt((String) btn_y1.getText() + (String) btn_y2.getText() + (String) btn_y3.getText() + (String) btn_y4.getText());
+		incyear = incyear+1;
+		
+		// testa o valor do dia, onde o menor dia é dia 01 
+		String strincyear = "2013";
+		
+		if (incyear < 1000){
+			strincyear = "0" + String.valueOf(incyear);
+		}else{
+			strincyear = String.valueOf(incyear);
+		}
+
+		// Atribui os valores
+		
+		Button botao = (Button)findViewById(R.id.button_y1);
+		botao.setText(strincyear.subSequence(0, 1));
+		
+		botao = (Button)findViewById(R.id.button_y2);
+		botao.setText(strincyear.subSequence(1, 2));
+
+		botao = (Button)findViewById(R.id.button_y3);
+		botao.setText(strincyear.subSequence(2, 3));
+		
+		botao = (Button)findViewById(R.id.button_y4);
+		botao.setText(strincyear.subSequence(3, 4));
 
 		
 	}
