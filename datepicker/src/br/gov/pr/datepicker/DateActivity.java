@@ -1,5 +1,6 @@
 package br.gov.pr.datepicker;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -64,7 +65,44 @@ public class DateActivity extends Activity {
 	}
 
 	public void exit(View v){
+	
+	}
 
+	public void updateLongDate(View v){
+
+		
+		Button botao = (Button)findViewById(R.id.btn_dateString);
+
+		Button btn_d1 = (Button) findViewById(R.id.button_d1);  
+		Button btn_d2 = (Button) findViewById(R.id.button_d2);  
+
+		Button btn_m1 = (Button) findViewById(R.id.button_m1);  
+		Button btn_m2 = (Button) findViewById(R.id.button_m2);  
+
+		Button btn_y1 = (Button) findViewById(R.id.button_y1);  
+		Button btn_y2 = (Button) findViewById(R.id.button_y2);  
+		Button btn_y3 = (Button) findViewById(R.id.button_y3);  
+		Button btn_y4 = (Button) findViewById(R.id.button_y4);  
+
+		String StrActualDate = (String) btn_d1.getText() + btn_d2.getText() + "/" + btn_m1.getText() + btn_m2.getText() + "/" + btn_y1.getText() + btn_y2.getText() + btn_y3.getText() + btn_y4.getText();
+
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		sdf.setLenient(false);
+		
+		String long_today="";
+
+		try {
+			Date data = sdf.parse(StrActualDate);
+			sdf = new SimpleDateFormat("EEE, dd MMM yyyy");
+			long_today = sdf.format(data);
+
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		botao.setText(long_today);
+		
 	}
 
 	
@@ -74,7 +112,9 @@ public class DateActivity extends Activity {
 		
 		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
 		bnext.requestFocus();
-		
+
+		// atualiza campo de data na linha abaixo do ok
+		this.updateLongDate(v);
 	}
 
 	
@@ -85,6 +125,8 @@ public class DateActivity extends Activity {
 		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
 		bnext.requestFocus();
 
+		// atualiza campo de data na linha abaixo do ok
+		this.updateLongDate(v);
 	}
 	
 	public void onClickButton3(View v){
@@ -94,6 +136,8 @@ public class DateActivity extends Activity {
 		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
 		bnext.requestFocus();
 
+		// atualiza campo de data na linha abaixo do ok
+		this.updateLongDate(v);
 	}
 
 	public void onClickButton4(View v){
@@ -103,6 +147,8 @@ public class DateActivity extends Activity {
 		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
 		bnext.requestFocus();
 
+		// atualiza campo de data na linha abaixo do ok
+		this.updateLongDate(v);
 	}
 
 	public void onClickButton5(View v){
@@ -111,7 +157,9 @@ public class DateActivity extends Activity {
 
 		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
 		bnext.requestFocus();
-
+		
+		// atualiza campo de data na linha abaixo do ok
+		this.updateLongDate(v);
 	}
 
 	public void onClickButton6(View v){
@@ -121,6 +169,8 @@ public class DateActivity extends Activity {
 		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
 		bnext.requestFocus();
 
+		// atualiza campo de data na linha abaixo do ok
+		this.updateLongDate(v);
 	}
 
 	public void onClickButton7(View v){
@@ -129,7 +179,10 @@ public class DateActivity extends Activity {
 	
 		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
 		bnext.requestFocus();
-}
+
+		// atualiza campo de data na linha abaixo do ok
+		this.updateLongDate(v);
+	}
 	
 	public void onClickButton8(View v){
 		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
@@ -137,6 +190,9 @@ public class DateActivity extends Activity {
 
 		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
 		bnext.requestFocus();
+	
+		// atualiza campo de data na linha abaixo do ok
+		this.updateLongDate(v);
 	}
 
 	public void onClickButton9(View v){
@@ -146,6 +202,8 @@ public class DateActivity extends Activity {
 		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
 		bnext.requestFocus();
 
+		// atualiza campo de data na linha abaixo do ok
+		this.updateLongDate(v);
 	}
 	
 	public void onClickButton0(View v){
@@ -155,6 +213,8 @@ public class DateActivity extends Activity {
 		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
 		bnext.requestFocus();
 
+		// atualiza campo de data na linha abaixo do ok
+		this.updateLongDate(v);
 	}
 
 	public void onClickButtonMin1d(View v){
@@ -186,6 +246,8 @@ public class DateActivity extends Activity {
 		botao = (Button)findViewById(R.id.button_d2);
 		botao.setText(strdecday.subSequence(1, 2));
 
+		// atualiza campo de data na linha abaixo do ok
+		this.updateLongDate(v);
 	}
 
 	public void onClickButtonMin1m(View v){
@@ -215,6 +277,9 @@ public class DateActivity extends Activity {
 		
 		botao = (Button)findViewById(R.id.button_m2);
 		botao.setText(strdecmonth.subSequence(1, 2));
+
+		// atualiza campo de data na linha abaixo do ok
+		this.updateLongDate(v);
 	}
 	
 	public void onClickButtonMin1y(View v){
@@ -251,7 +316,8 @@ public class DateActivity extends Activity {
 		botao = (Button)findViewById(R.id.button_y4);
 		botao.setText(strdecyear.subSequence(3, 4));
 
-
+		// atualiza campo de data na linha abaixo do ok
+		this.updateLongDate(v);
 	}
 	
 	public void onClickButtonPlus1d(View v){
@@ -283,6 +349,8 @@ public class DateActivity extends Activity {
 		botao = (Button)findViewById(R.id.button_d2);
 		botao.setText(strincday.subSequence(1, 2));
 
+		// atualiza campo de data na linha abaixo do ok
+		this.updateLongDate(v);
 	}
 
 	public void onClickButtonPlus1m(View v){
@@ -313,6 +381,9 @@ public class DateActivity extends Activity {
 		
 		botao = (Button)findViewById(R.id.button_m2);
 		botao.setText(strincmonth.subSequence(1, 2));
+
+		// atualiza campo de data na linha abaixo do ok
+		this.updateLongDate(v);
 	}
 	
 	public void onClickButtonPlus1y(View v){
@@ -350,7 +421,8 @@ public class DateActivity extends Activity {
 		botao = (Button)findViewById(R.id.button_y4);
 		botao.setText(strincyear.subSequence(3, 4));
 
-		
+		// atualiza campo de data na linha abaixo do ok
+		this.updateLongDate(v);
 	}
 
 

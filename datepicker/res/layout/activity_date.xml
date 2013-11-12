@@ -359,17 +359,32 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content" >
             
-               <Button
-            android:id="@+id/button17"
-            style="?android:attr/buttonStyleSmall"
+          <Button
+         	android:id="@+id/buttonOk"
+            	style="?android:attr/buttonStyleSmall"
                 android:layout_width="0dp"
     	        android:layout_height="45dp"
 	            android:layout_weight="1"
-				android:background="@drawable/black"	       
 	            android:text="@string/botao_ok"
+	            android:onClick="exit"
 	            android:top="55dp" />
        
        
        
    </TableRow>
+
+   <TableRow
+       android:id="@+id/tableRow7"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" >
+
+       <Button
+           android:id="@+id/btn_dateString"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="#fff"
+           android:text="" />
+
+   </TableRow>
+
 </TableLayout>
