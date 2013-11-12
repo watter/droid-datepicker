@@ -69,7 +69,6 @@ public class DateActivity extends Activity {
 	}
 
 	public void updateLongDate(View v){
-
 		
 		Button botao = (Button)findViewById(R.id.btn_dateString);
 
@@ -106,115 +105,88 @@ public class DateActivity extends Activity {
 	}
 
 	
-	public void onClickButton1(View v){
-		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
-		botao.setText("1");
+	public void updateValue(View v, String val){
+
 		
+		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
+
+		int num = Integer.parseInt((String) val);
+		
+
+		// impede de colocar uma data com mais de 39 dias ;-)
+		
+		if ( botao.getId() == R.id.button_d1 ){
+			if (num < 4){
+				botao.setText(val);
+			}
+		}
+
+		
+		if ( botao.getId() == R.id.button_d2 ){
+			
+			Button btn_d1 = (Button)findViewById(R.id.button_d1);
+			int d1 = Integer.parseInt((String) btn_d1.getText());
+			// se menor que 3X dias , seta
+			if (d1 < 4){
+				botao.setText(val);
+			// 1d = 3 então segundo só pode ser < 2 => max 31 	
+			} else if (d1 == 3){
+				if (num < 2){
+					botao.setText(val);
+				}
+			}
+		}
+
 		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
 		bnext.requestFocus();
 
 		// atualiza campo de data na linha abaixo do ok
 		this.updateLongDate(v);
+
+	}
+
+	
+	
+	public void onClickButton1(View v){
+		this.updateValue(v, "1");
 	}
 
 	
 	public void onClickButton2(View v){
-		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
-		botao.setText("2");
-
-		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
-		bnext.requestFocus();
-
-		// atualiza campo de data na linha abaixo do ok
-		this.updateLongDate(v);
+		this.updateValue(v, "2");
 	}
 	
 	public void onClickButton3(View v){
-		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
-		botao.setText("3");
+		this.updateValue(v, "3");
 
-		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
-		bnext.requestFocus();
-
-		// atualiza campo de data na linha abaixo do ok
-		this.updateLongDate(v);
 	}
 
 	public void onClickButton4(View v){
-		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
-		botao.setText("4");
-
-		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
-		bnext.requestFocus();
-
-		// atualiza campo de data na linha abaixo do ok
-		this.updateLongDate(v);
+		this.updateValue(v, "4");
 	}
 
 	public void onClickButton5(View v){
-		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
-		botao.setText("5");
-
-		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
-		bnext.requestFocus();
-		
-		// atualiza campo de data na linha abaixo do ok
-		this.updateLongDate(v);
+		this.updateValue(v, "5");
 	}
 
 	public void onClickButton6(View v){
-		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
-		botao.setText("6");
-
-		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
-		bnext.requestFocus();
-
-		// atualiza campo de data na linha abaixo do ok
-		this.updateLongDate(v);
+		this.updateValue(v, "6");
 	}
 
 	public void onClickButton7(View v){
-		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
-		botao.setText("7");
-	
-		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
-		bnext.requestFocus();
-
-		// atualiza campo de data na linha abaixo do ok
-		this.updateLongDate(v);
+		this.updateValue(v, "7");
 	}
 	
 	public void onClickButton8(View v){
-		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
-		botao.setText("8");
-
-		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
-		bnext.requestFocus();
-	
-		// atualiza campo de data na linha abaixo do ok
-		this.updateLongDate(v);
+		this.updateValue(v, "8");
 	}
 
 	public void onClickButton9(View v){
-		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
-		botao.setText("9");
-		
-		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
-		bnext.requestFocus();
-
-		// atualiza campo de data na linha abaixo do ok
-		this.updateLongDate(v);
+		this.updateValue(v, "9");
 	}
 	
 	public void onClickButton0(View v){
-		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
-		botao.setText("0");
-		
-		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
-		bnext.requestFocus();
-
-		// atualiza campo de data na linha abaixo do ok
-		this.updateLongDate(v);
+		this.updateValue(v, "0");
 	}
 
 	public void onClickButtonMin1d(View v){
