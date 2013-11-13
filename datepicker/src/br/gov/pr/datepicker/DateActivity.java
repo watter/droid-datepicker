@@ -111,19 +111,21 @@ public class DateActivity extends Activity {
 		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
 
 		int num = Integer.parseInt((String) val);
+
+		Boolean validated = false;
 		
 
 		// impede de colocar uma data com mais de 39 dias ;-)
 		
 		if ( botao.getId() == R.id.button_d1 ){
 			if (num < 4){
-				botao.setText(val);
+				botao.setText(val);	
+				validated = true;
 			}
 		}
 
 		
 		if ( botao.getId() == R.id.button_d2 ){
-			
 			Button btn_d1 = (Button)findViewById(R.id.button_d1);
 			int d1 = Integer.parseInt((String) btn_d1.getText());
 			// se menor que 3X dias , seta
@@ -133,10 +135,37 @@ public class DateActivity extends Activity {
 			} else if (d1 == 3){
 				if (num < 2){
 					botao.setText(val);
+					validated = true;
 				}
 			}
 		}
 
+		
+		if ( botao.getId() == R.id.button_m1 ){
+			if (num < 2){
+				botao.setText(val);	
+				validated = true;
+			}
+		}
+
+		
+		if ( botao.getId() == R.id.button_m2 ){
+			Button btn_d1 = (Button)findViewById(R.id.button_d1);
+			int d1 = Integer.parseInt((String) btn_d1.getText());
+			// se menor que 3X dias , seta
+			if (d1 < 1){
+				botao.setText(val);
+			// 1d = 3 então segundo só pode ser < 2 => max 31 	
+			} else if (d1 == 1){
+				if (num < 3){
+					botao.setText(val);
+					validated = true;
+				}
+			}
+		}
+
+				
+		
 		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
 		bnext.requestFocus();
 
