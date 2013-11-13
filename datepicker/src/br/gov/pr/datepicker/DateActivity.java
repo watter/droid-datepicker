@@ -184,6 +184,10 @@ public class DateActivity extends Activity {
 			break;
 
 		case R.id.button_m1:
+			// se o valor == 1 para o mes, tem que colocar o 0 para poder validar a data
+			if (val.equals("1")){
+				btn_m2.setText("0");
+			}
 			StrDateToValidate = (String) btn_d1.getText() + btn_d2.getText() + "/" + val + btn_m2.getText() + "/" + btn_y1.getText() + btn_y2.getText() + btn_y3.getText() + btn_y4.getText();			
 			break;
 		case R.id.button_m2:
