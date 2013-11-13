@@ -64,8 +64,22 @@ public class DateActivity extends Activity {
 		return true;
 	}
 
-	public void exit(View v){
-	
+	public String exit(View v){
+		
+		Button btn_d1 = (Button) findViewById(R.id.button_d1);  
+		Button btn_d2 = (Button) findViewById(R.id.button_d2);  
+
+		Button btn_m1 = (Button) findViewById(R.id.button_m1);  
+		Button btn_m2 = (Button) findViewById(R.id.button_m2);  
+
+		Button btn_y1 = (Button) findViewById(R.id.button_y1);  
+		Button btn_y2 = (Button) findViewById(R.id.button_y2);  
+		Button btn_y3 = (Button) findViewById(R.id.button_y3);  
+		Button btn_y4 = (Button) findViewById(R.id.button_y4);  
+
+		String StrActualDate = (String) btn_d1.getText() + btn_d2.getText() + "/" + btn_m1.getText() + btn_m2.getText() + "/" + btn_y1.getText() + btn_y2.getText() + btn_y3.getText() + btn_y4.getText();
+		return StrActualDate;
+		
 	}
 
 	public void updateLongDate(View v){
