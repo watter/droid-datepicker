@@ -104,67 +104,119 @@ public class DateActivity extends Activity {
 		
 	}
 
+	// Chopped from: http://www.dreamincode.net/forums/topic/14886-date-validation-using-simpledateformat/
+	// date validation using SimpleDateFormat
+	// it will take a string and make sure it's in the proper 
+	// format as defined by you, and it will also make sure that
+	// it's a legal date
+
+	public boolean isValidDate(String date)
+	{
+	    // set date format, this can be changed to whatever format
+	    // you want, MM-dd-yyyy, MM.dd.yyyy, dd.MM.yyyy etc.
+	    // you can read more about it here:
+	    // http://java.sun.com/j2se/1.4.2/docs/api/index.html
+	    
+	    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	    
+	    // declare and initialize testDate variable, this is what will hold
+	    // our converted string
+	    
+	    Date testDate = null;
+
+	    // we will now try to parse the string into date form
+	    try
+	    {
+	      testDate = sdf.parse(date);
+	    }
+
+	    // if the format of the string provided doesn't match the format we 
+	    // declared in SimpleDateFormat() we will get an exception
+
+	    catch (ParseException e)
+	    {
+	      return false;
+	    }
+
+	    // dateformat.parse will accept any date as long as it's in the format
+	    // you defined, it simply rolls dates over, for example, december 32 
+	    // becomes jan 1 and december 0 becomes november 30
+	    // This statement will make sure that once the string 
+	    // has been checked for proper formatting that the date is still the 
+	    // date that was entered, if it's not, we assume that the date is invalid
+
+	    if (!sdf.format(testDate).equals(date)) 
+	    {
+	      return false;
+	    }
+	    
+	    // if we make it to here without getting an error it is assumed that
+	    // the date was a valid one and that it's in the proper format
+	    return true;
+	} // end isValidDate
+
+	
 	
 	public void updateValue(View v, String val){
+		Button botao = (Button) getWindow().getCurrentFocus(); 
 
-		
-		Button botao = (Button) getWindow().getCurrentFocus(); //   findViewById(R.id.button_d1);
+		Button btn_d1 = (Button) findViewById(R.id.button_d1);  
+		Button btn_d2 = (Button) findViewById(R.id.button_d2);  
 
-		int num = Integer.parseInt((String) val);
+		Button btn_m1 = (Button) findViewById(R.id.button_m1);  
+		Button btn_m2 = (Button) findViewById(R.id.button_m2);  
+
+		Button btn_y1 = (Button) findViewById(R.id.button_y1);  
+		Button btn_y2 = (Button) findViewById(R.id.button_y2);  
+		Button btn_y3 = (Button) findViewById(R.id.button_y3);  
+		Button btn_y4 = (Button) findViewById(R.id.button_y4);  
 
 		Boolean validated = false;
 		
-
-		// impede de colocar uma data com mais de 39 dias ;-)
+		String StrDateToValidate= "";
 		
-		if ( botao.getId() == R.id.button_d1 ){
-			if (num < 4){
-				botao.setText(val);	
-				validated = true;
-			}
+		switch (botao.getId()) {
+		case R.id.button_d1:
+			StrDateToValidate = (String) val + btn_d2.getText() + "/" + btn_m1.getText() + btn_m2.getText() + "/" + btn_y1.getText() + btn_y2.getText() + btn_y3.getText() + btn_y4.getText();
+			break;
+		case R.id.button_d2:
+			StrDateToValidate = (String) btn_d1.getText() + val + "/" + btn_m1.getText() + btn_m2.getText() + "/" + btn_y1.getText() + btn_y2.getText() + btn_y3.getText() + btn_y4.getText();
+			break;
+
+		case R.id.button_m1:
+			StrDateToValidate = (String) btn_d1.getText() + btn_d2.getText() + "/" + val + btn_m2.getText() + "/" + btn_y1.getText() + btn_y2.getText() + btn_y3.getText() + btn_y4.getText();			
+			break;
+		case R.id.button_m2:
+			StrDateToValidate = (String) btn_d1.getText() + btn_d2.getText() + "/" + btn_m1.getText() + val + "/" + btn_y1.getText() + btn_y2.getText() + btn_y3.getText() + btn_y4.getText();			
+			
+			break;
+		case R.id.button_y1:
+			StrDateToValidate = (String) btn_d1.getText() + btn_d2.getText() + "/" + btn_m1.getText() + btn_m2.getText() + "/" + val + btn_y2.getText() + btn_y3.getText() + btn_y4.getText();			
+			
+			break;
+		case R.id.button_y2:
+			StrDateToValidate = (String) btn_d1.getText() + btn_d2.getText() + "/" + btn_m1.getText() + btn_m2.getText() + "/" + btn_y1.getText() + val + btn_y3.getText() + btn_y4.getText();			
+			
+			break;
+		case R.id.button_y3:
+			StrDateToValidate = (String) btn_d1.getText() + btn_d2.getText() + "/" + btn_m1.getText() + btn_m2.getText() + "/" + btn_y1.getText() + btn_y2.getText() + val + btn_y4.getText();			
+			
+			break;
+		case R.id.button_y4:
+			StrDateToValidate = (String) btn_d1.getText() + btn_d2.getText() + "/" + btn_m1.getText() + btn_m2.getText() + "/" + btn_y1.getText() + btn_y2.getText() + btn_y3.getText() + val;			
+			
+			break;
+
+		default:
+			break;
 		}
 
+		validated = isValidDate(StrDateToValidate);
 		
-		if ( botao.getId() == R.id.button_d2 ){
-			Button btn_d1 = (Button)findViewById(R.id.button_d1);
-			int d1 = Integer.parseInt((String) btn_d1.getText());
-			// se menor que 3X dias , seta
-			if (d1 < 4){
-				botao.setText(val);
-			// 1d = 3 então segundo só pode ser < 2 => max 31 	
-			} else if (d1 == 3){
-				if (num < 2){
-					botao.setText(val);
-					validated = true;
-				}
-			}
-		}
-
-		
-		if ( botao.getId() == R.id.button_m1 ){
-			if (num < 2){
-				botao.setText(val);	
-				validated = true;
-			}
-		}
-
-		
-		if ( botao.getId() == R.id.button_m2 ){
-			Button btn_d1 = (Button)findViewById(R.id.button_d1);
-			int d1 = Integer.parseInt((String) btn_d1.getText());
-			// se menor que 3X dias , seta
-			if (d1 < 1){
-				botao.setText(val);
-			// 1d = 3 então segundo só pode ser < 2 => max 31 	
-			} else if (d1 == 1){
-				if (num < 3){
-					botao.setText(val);
-					validated = true;
-				}
-			}
-		}
-
-				
+		if (validated) {
+			// atribui o valor validado
+			botao.setText(val);
+		} 
 		
 		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
 		bnext.requestFocus();
