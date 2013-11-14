@@ -22,6 +22,14 @@
     <string name="botao_mais_1d">+1d</string>
     <string name="botao_mais_1a">+1a</string>
     <string name="botao_ok">OK</string>
-    <string name="title_activity_date">DateActivity</string>
+    <string name="botao_15">15</string>
+    <string name="botao_30">30</string>
+    <string name="botao_45">45</string>
+    <string name="botao_00">00</string>
+    <string name="botao_menos_1h">-1h</string>
+    <string name="botao_mais_1h">+1h</string>
+    <string name="title_activity_date">Data</string>
+    <string name="title_activity_time">Hora</string>
+    <string name="separador_hora">:</string>
 
 </resources>

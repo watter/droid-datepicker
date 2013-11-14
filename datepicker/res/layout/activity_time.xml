@@ -1,0 +1,315 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".DateActivity" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/button_h1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_marginLeft="45dp"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/day_selector"
+            android:nextFocusUp="@+id/button_ok"
+        	android:nextFocusLeft="@+id/button_ok"
+        	android:nextFocusRight="@+id/button_h2"
+        	android:nextFocusDown="@+id/button_h2"
+        	android:nextFocusForward="@+id/button_h2"
+        	android:focusable="true" 
+        	android:focusableInTouchMode="true"
+        	android:maxLength="1"
+        	
+        	>
+        		<!-- pede o foco para esse botão -->
+       	</Button>
+
+        <Button
+            android:id="@+id/button_h2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/day_selector"
+            android:layout_marginLeft="5dp"
+            android:nextFocusUp="@+id/button_h1"
+        	android:nextFocusLeft="@+id/button_h1"
+        	android:nextFocusRight="@+id/button_min1"
+        	android:nextFocusDown="@+id/button_min1"
+        	android:nextFocusForward="@+id/button_min1"
+        	android:focusable="true" 
+        	android:focusableInTouchMode="true"
+        	android:maxLength="1"
+            />
+
+        <TextView
+            android:id="@+id/textView_hms1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/separador_hora"
+            android:layout_marginLeft="2dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        
+        
+        <Button
+            android:id="@+id/button_min1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/month_selector"
+            android:nextFocusUp="@+id/button_h2"
+        	android:nextFocusLeft="@+id/button_h2"
+        	android:nextFocusRight="@+id/button_min2"
+        	android:nextFocusDown="@+id/button_min2"
+        	android:nextFocusForward="@+id/button_min2"
+        	android:focusable="true" 
+        	android:focusableInTouchMode="true"
+             />
+                
+        <Button
+            android:id="@+id/button_min2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/month_selector"
+            android:nextFocusUp="@+id/button_min1"
+        	android:nextFocusLeft="@+id/button_min1"
+        	android:nextFocusRight="@+id/button_ok"
+        	android:nextFocusDown="@+id/button_ok"
+        	android:nextFocusForward="@+id/button_ok"
+        	android:focusable="true" 
+        	android:focusableInTouchMode="true"
+             />
+        
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:top="15dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/button_1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickButton1"
+            android:text="@string/botao_1" />
+
+        <Button
+            android:id="@+id/button_2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickButton2"
+            android:text="@string/botao_2" />
+
+        <Button
+            android:id="@+id/button_3"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickButton3"
+            android:text="@string/botao_3" />
+
+        <Button
+            android:id="@+id/button_min1m"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/month_button"
+            android:onClick="onClickButtonMin1m"
+            android:text="@string/botao_15" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/button_4"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:onClick="onClickButton4"
+            android:text="@string/botao_4" />
+
+        <Button
+            android:id="@+id/button_5"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:onClick="onClickButton5"
+            android:text="@string/botao_5" />
+
+        <Button
+            android:id="@+id/button_6"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:onClick="onClickButton6"
+            android:text="@string/botao_6" />
+
+        <Button
+            android:id="@+id/button_plus1m"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/month_button"
+            android:onClick="onClickButtonPlus1m"
+            android:text="@string/botao_30" />
+    </TableRow>
+
+   <TableRow
+       android:id="@+id/tableRow4"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center_horizontal" >
+
+       <Button
+           android:id="@+id/button_7"
+           style="?android:attr/buttonStyleSmall"
+           android:layout_width="0dp"
+           android:layout_height="45dp"
+           android:layout_weight="1"
+           android:onClick="onClickButton7"
+           android:text="@string/botao_7" />
+
+       <Button
+           android:id="@+id/button_8"
+           style="?android:attr/buttonStyleSmall"
+           android:layout_width="0dp"
+           android:layout_height="45dp"
+           android:layout_weight="1"
+           android:onClick="onClickButton8"
+           android:text="@string/botao_8" />
+
+       <Button
+           android:id="@+id/button_9"
+           style="?android:attr/buttonStyleSmall"
+           android:layout_width="0dp"
+           android:layout_height="45dp"
+           android:layout_weight="1"
+           android:onClick="onClickButton9"
+           android:text="@string/botao_9" />
+
+       <Button
+           android:id="@+id/button_min1a"
+           style="?android:attr/buttonStyleSmall"
+           android:layout_width="0dp"
+           android:layout_height="45dp"
+           android:layout_weight="1"
+           android:background="@drawable/month_button"
+           android:onClick="onClickButtonMin1y"
+           android:text="@string/botao_45" />
+   </TableRow>
+
+   <TableRow
+       android:id="@+id/tableRow5"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center_horizontal" >
+       
+          <Button
+                android:id="@+id/button_min1d"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+    	        android:layout_height="45dp"
+	            android:layout_weight="1"
+                android:background="@drawable/day_button"
+                android:onClick="onClickButtonMin1d"
+                android:text="@string/botao_menos_1h" />
+
+            <Button
+                android:id="@+id/button_0"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+    	        android:layout_height="45dp"
+	            android:layout_weight="1"
+	            android:onClick="onClickButton0"
+                android:text="@string/botao_0" />
+
+            <Button
+                android:id="@+id/button_plus1d"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+    	        android:layout_height="45dp"
+	            android:layout_weight="1"
+                android:background="@drawable/day_button"
+                android:onClick="onClickButtonPlus1d"
+                android:text="@string/botao_mais_1h" />
+
+            <Button
+                android:id="@+id/button_plus1a"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+    	        android:layout_height="45dp"
+	            android:layout_weight="1"
+                android:background="@drawable/month_button"
+                android:onClick="onClickButtonPlus1y"
+                android:text="@string/botao_00" />
+       
+   </TableRow>
+
+   <TableRow
+       android:id="@+id/tableRow6"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" >
+            
+          <Button
+         	android:id="@+id/buttonOk"
+            	style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+    	        android:layout_height="45dp"
+	            android:layout_weight="1"
+	            android:text="@string/botao_ok"
+	            android:onClick="exit"
+	            android:top="55dp" />
+       
+       
+       
+   </TableRow>
+
+   <TableRow
+       android:id="@+id/tableRow7"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" >
+
+       <Button
+           android:id="@+id/btn_dateString"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="#fff"
+           android:text="" />
+
+   </TableRow>
+
+</TableLayout>
