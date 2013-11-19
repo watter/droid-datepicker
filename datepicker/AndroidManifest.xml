@@ -16,10 +16,7 @@
         <activity
             android:name="br.gov.pr.datepicker.MainActivity"
             android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name="br.gov.pr.datepicker.DateActivity"
-            android:label="@string/title_activity_date" >
+            
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,13 +25,28 @@
             
         </activity>
         <activity
+            android:name="br.gov.pr.datepicker.DateActivity"
+            android:label="@string/title_activity_date" android:launchMode="singleTop"
+            android:parentActivityName="br.gov.pr.datepicker.MainActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog"
+            >
+<!-- android:theme="@android:style/Theme.Holo.Dialog" - faz com que a activity apareça como sendo um tema de diálogo -->
+            
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.gov.pr.datepicker.MainActivity" />
+            
+        </activity>
+        <activity
             android:name="br.gov.pr.datepicker.TimeActivity"
-            android:label="@string/title_activity_time" >
-<!--             <intent-filter> -->
-<!--                 <action android:name="android.intent.action.MAIN" /> -->
+            android:label="@string/title_activity_time" 
+            android:parentActivityName="br.gov.pr.datepicker.MainActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" >
 
-<!--                 <category android:name="android.intent.category.LAUNCHER" /> -->
-<!--             </intent-filter> -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.gov.pr.datepicker.MainActivity" />
+            
         </activity>
         
     </application>
