@@ -15,7 +15,7 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/button_h1"
+            android:id="@+id/btn_hour1"
             style="?android:attr/buttonStyleSmall"
             android:layout_marginLeft="45dp"
             android:layout_width="25dp"
@@ -36,7 +36,7 @@
        	</Button>
 
         <Button
-            android:id="@+id/button_h2"
+            android:id="@+id/btn_hour2"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
         
         
         <Button
-            android:id="@+id/button_min1"
+            android:id="@+id/btn_min1"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
              />
                 
         <Button
-            android:id="@+id/button_min2"
+            android:id="@+id/btn_min2"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
@@ -134,13 +134,13 @@
             android:text="@string/botao_3" />
 
         <Button
-            android:id="@+id/button_min1m"
+            android:id="@+id/button_15min"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
             android:background="@drawable/month_button"
-            android:onClick="onClickButtonMin1m"
+            android:onClick="onClickButton15Min"
             android:text="@string/botao_15" />
     </TableRow>
 
@@ -178,13 +178,13 @@
             android:text="@string/botao_6" />
 
         <Button
-            android:id="@+id/button_plus1m"
+            android:id="@+id/button_30min"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
             android:background="@drawable/month_button"
-            android:onClick="onClickButtonPlus1m"
+            android:onClick="onClickButton30Min"
             android:text="@string/botao_30" />
     </TableRow>
 
@@ -222,13 +222,13 @@
            android:text="@string/botao_9" />
 
        <Button
-           android:id="@+id/button_min1a"
+           android:id="@+id/button_45min"
            style="?android:attr/buttonStyleSmall"
            android:layout_width="0dp"
            android:layout_height="45dp"
            android:layout_weight="1"
            android:background="@drawable/month_button"
-           android:onClick="onClickButtonMin1y"
+           android:onClick="onClickButton45Min"
            android:text="@string/botao_45" />
    </TableRow>
 
@@ -245,7 +245,7 @@
     	        android:layout_height="45dp"
 	            android:layout_weight="1"
                 android:background="@drawable/day_button"
-                android:onClick="onClickButtonMin1d"
+                android:onClick="onClickButtonMin1Hour"
                 android:text="@string/botao_menos_1h" />
 
             <Button
@@ -258,23 +258,23 @@
                 android:text="@string/botao_0" />
 
             <Button
-                android:id="@+id/button_plus1d"
+                android:id="@+id/button_plus1hour"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="0dp"
     	        android:layout_height="45dp"
 	            android:layout_weight="1"
                 android:background="@drawable/day_button"
-                android:onClick="onClickButtonPlus1d"
+                android:onClick="onClickButtonPlus1Hour"
                 android:text="@string/botao_mais_1h" />
 
             <Button
-                android:id="@+id/button_plus1a"
+                android:id="@+id/button_00min"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="0dp"
     	        android:layout_height="45dp"
 	            android:layout_weight="1"
                 android:background="@drawable/month_button"
-                android:onClick="onClickButtonPlus1y"
+                android:onClick="onClickButton00Min"
                 android:text="@string/botao_00" />
        
    </TableRow>
@@ -296,20 +296,6 @@
        
        
        
-   </TableRow>
-
-   <TableRow
-       android:id="@+id/tableRow7"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content" >
-
-       <Button
-           android:id="@+id/btn_dateString"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:background="#fff"
-           android:text="" />
-
    </TableRow>
 
 </TableLayout>
