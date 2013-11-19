@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -42,7 +43,7 @@ public class TimeActivity extends Activity {
 		return true;
 	}
 
-	public String exit(View v){
+	public void exit(View v){
 		
 		Button btn_hour1 = (Button) findViewById(R.id.btn_hour1);  
 		Button btn_hour2 = (Button) findViewById(R.id.btn_hour2);  
@@ -51,7 +52,11 @@ public class TimeActivity extends Activity {
 		Button btn_min2 = (Button) findViewById(R.id.btn_min2);  
 
 		String now = (String) btn_hour1.getText() + btn_hour2.getText() + ":" + btn_min1.getText() + btn_min2.getText();
-		return now;
+		
+    	Intent intent = new Intent(this, MainActivity.class);
+    	intent.putExtra("TIME_SELECTED", now);
+		setResult(RESULT_OK, intent);
+		finish();
 		
 	}
 

@@ -6,6 +6,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -55,6 +56,7 @@ public class DateActivity extends Activity {
 		botao = (Button)findViewById(R.id.button_y4);
 		botao.setText(today.subSequence(9, 10));
 
+		
 	}
 
 	@Override
@@ -64,7 +66,7 @@ public class DateActivity extends Activity {
 		return true;
 	}
 
-	public String exit(View v){
+	public void exit(View v){
 		
 		Button btn_d1 = (Button) findViewById(R.id.button_d1);  
 		Button btn_d2 = (Button) findViewById(R.id.button_d2);  
@@ -78,8 +80,12 @@ public class DateActivity extends Activity {
 		Button btn_y4 = (Button) findViewById(R.id.button_y4);  
 
 		String StrActualDate = (String) btn_d1.getText() + btn_d2.getText() + "/" + btn_m1.getText() + btn_m2.getText() + "/" + btn_y1.getText() + btn_y2.getText() + btn_y3.getText() + btn_y4.getText();
-		return StrActualDate;
 		
+
+    	Intent intent = new Intent(this, MainActivity.class);
+    	intent.putExtra("DATE_SELECTED", StrActualDate);
+		setResult(RESULT_OK, intent);
+		finish();
 	}
 
 	public void updateLongDate(View v){
