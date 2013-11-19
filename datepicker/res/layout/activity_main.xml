@@ -9,220 +9,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
-    
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-
-            <EditText
-                android:id="@+id/editText1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/blue"
-                android:ems="10"
-                android:inputType="number" >
-
-                <requestFocus />
-            </EditText>
-
-            <EditText
-                android:id="@+id/editText5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/blue"
-                android:ems="10"
-                android:inputType="number" />
-
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/separador_data"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <EditText
-                android:id="@+id/editText6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/green"
-                android:ems="10"
-                android:inputType="number" />
-
-            <EditText
-                android:id="@+id/editText8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/green"
-                android:ems="10"
-                android:inputType="number" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/separador_data"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <EditText
-                android:id="@+id/editText7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/yellow"
-                android:ems="10"
-                android:inputType="number" />
-
-            <EditText
-                android:id="@+id/editText4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/yellow"
-                android:ems="10"
-                android:inputType="number" />
-
-            <EditText
-                android:id="@+id/editText3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/yellow"
-                android:ems="10"
-                android:inputType="number" />
-
-            <EditText
-                android:id="@+id/editText2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/yellow"
-                android:ems="10"
-                android:inputType="number" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-
-            <Button
-                android:id="@+id/button1"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:text="@string/botao_1" />
-
-            <Button
-                android:id="@+id/button2"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:text="@string/botao_2" />
-
-            <Button
-                android:id="@+id/button3"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:text="@string/botao_3" />
-
-            <Space
-                android:id="@+id/space1"
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
-                tools:targetApi="14" />
-
-            <Button
-                android:id="@+id/button4"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:background="#38b90a"
-                android:text="@string/botao_menos_1m" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-
-            <Button
-                android:id="@+id/button5"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:text="@string/botao_4" />
-
-            <Button
-                android:id="@+id/button6"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:text="@string/botao_5" />
-
-            <Button
-                android:id="@+id/button7"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:text="@string/botao_6" />
-
-            <Space
-                android:id="@+id/space2"
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
-                tools:targetApi="14" />
-
-            <Button
-                android:id="@+id/button8"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:background="#38b90a"
-                android:text="@string/botao_mais_1m" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-
-            <Button
-                android:id="@+id/button9"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:text="@string/botao_7" />
-
-            <Button
-                android:id="@+id/button10"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:text="@string/botao_8" />
-
-            <Button
-                android:id="@+id/button11"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:text="@string/botao_9" />
-
-            <Space
-                android:id="@+id/space3"
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
-                tools:targetApi="14" />
-
-            <Button
-                android:id="@+id/button12"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:background="#fffb00"
-                android:text="@string/botao_menos_1a" />
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -231,25 +17,12 @@
             <Button
                 android:id="@+id/button13"
                 style="?android:attr/buttonStyleSmall"
-                android:layout_width="45dp"
+                android:layout_width="wrap_content"
                 android:layout_height="45dp"
+                android:layout_weight="0.34"
                 android:background="#0092ff"
-                android:text="@string/botao_menos_1d" />
-
-            <Button
-                android:id="@+id/button14"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:text="@string/botao_0" />
-
-            <Button
-                android:id="@+id/button15"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:background="#0092ff"
-                android:text="@string/botao_mais_1d" />
+                android:onClick="onClickDate"
+                android:text="Selecionar Data" />
 
             <Space
                 android:id="@+id/space4"
@@ -262,8 +35,11 @@
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
+                android:layout_weight="0.59"
                 android:background="#fffb00"
-                android:text="@string/botao_mais_1a" />
+                android:onClick="onClickTime"
+                android:text="Selecionar Hora" />
+
         </LinearLayout>
 
         <Button
@@ -274,5 +50,11 @@
             android:text="@string/botao_ok"
             android:onClick="datepicker"
             android:top="15dp" />
+
+        <Button
+            android:id="@+id/button_res"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
 
 </LinearLayout>
