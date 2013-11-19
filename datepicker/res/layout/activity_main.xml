@@ -43,15 +43,6 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button17"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/botao_ok"
-            android:onClick="datepicker"
-            android:top="15dp" />
-
-        <Button
             android:id="@+id/button_res"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
