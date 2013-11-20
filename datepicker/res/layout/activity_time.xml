@@ -17,7 +17,7 @@
         <Button
             android:id="@+id/btn_hour1"
             style="?android:attr/buttonStyleSmall"
-            android:layout_marginLeft="45dp"
+            android:layout_marginLeft="80dp"
             android:layout_width="25dp"
             android:layout_height="45dp"
             android:layout_weight="1"
@@ -85,7 +85,7 @@
             android:layout_height="45dp"
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="45dp"
+            android:layout_marginRight="80dp"
             android:background="@drawable/month_selector"
             android:nextFocusUp="@+id/btn_min1"
         	android:nextFocusLeft="@+id/btn_min1"
