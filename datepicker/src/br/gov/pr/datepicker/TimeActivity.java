@@ -138,7 +138,16 @@ public class TimeActivity extends Activity {
 			botao.setText(val);
 		} 
 		
-		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
+		// tive que mudar o foco para FOCUS_DOWN porque a api 10 não tem o FOCUS_Forward
+		Button bnext = (Button) botao.focusSearch(View.FOCUS_DOWN);
+
+		// Esse teste foi feito por causa da api 10 não ter o focus_forward e capotar quando vai para o focus_down no último botão da 
+		// linha
+		if(botao.getId() == R.id.btn_min2){
+			bnext = btn_hour1;
+		}
+
+		
 		bnext.requestFocus();
 
 	}

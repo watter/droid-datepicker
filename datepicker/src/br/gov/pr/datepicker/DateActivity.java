@@ -242,7 +242,16 @@ public class DateActivity extends Activity {
 			botao.setText(val);
 		} 
 		
-		Button bnext = (Button) botao.focusSearch(View.FOCUS_FORWARD);
+
+		// tive que mudar o foco para FOCUS_DOWN porque a api 10 não tem o FOCUS_Forward
+		Button bnext = (Button) botao.focusSearch(View.FOCUS_DOWN);
+
+		// Esse teste foi feito por causa da api 10 não ter o focus_forward e capotar quando vai para o focus_down no último botão da 
+		// linha
+		if(botao.getId() == R.id.button_y4){
+			bnext = btn_d1;
+		}
+		
 		bnext.requestFocus();
 
 		// atualiza campo de data na linha abaixo do ok

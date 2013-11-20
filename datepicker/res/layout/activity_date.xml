@@ -360,7 +360,7 @@
        android:layout_height="wrap_content" >
             
           <Button
-         	android:id="@+id/buttonOk"
+         	android:id="@+id/button_ok"
             	style="?android:attr/buttonStyleSmall"
                 android:layout_width="0dp"
     	        android:layout_height="45dp"
