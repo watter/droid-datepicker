@@ -24,12 +24,6 @@
                 android:onClick="onClickDate"
                 android:text="Selecionar Data" />
 
-            <Space
-                android:id="@+id/space4"
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
-                tools:targetApi="14" />
-
             <Button
                 android:id="@+id/button16"
                 style="?android:attr/buttonStyleSmall"
