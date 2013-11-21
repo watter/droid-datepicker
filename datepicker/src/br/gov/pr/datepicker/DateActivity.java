@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -29,7 +30,7 @@ public class DateActivity extends Activity {
 		//
 		// Display a date in day, month, year format
 		//
-		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy", Locale.US);
 		String today = formatter.format(date);
 
 		Button botao = (Button)findViewById(R.id.button_d1);
@@ -112,14 +113,14 @@ public class DateActivity extends Activity {
 
 		String StrActualDate = (String) btn_d1.getText() + btn_d2.getText() + "/" + btn_m1.getText() + btn_m2.getText() + "/" + btn_y1.getText() + btn_y2.getText() + btn_y3.getText() + btn_y4.getText();
 
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.US);
 		sdf.setLenient(false);
 		
 		String long_today="";
 
 		try {
 			Date data = sdf.parse(StrActualDate);
-			sdf = new SimpleDateFormat("EEE, dd MMM yyyy");
+			sdf = new SimpleDateFormat("EEE, dd MMM yyyy", Locale.US);
 			long_today = sdf.format(data);
 
 		} catch (ParseException e) {
@@ -144,7 +145,7 @@ public class DateActivity extends Activity {
 	    // you can read more about it here:
 	    // http://java.sun.com/j2se/1.4.2/docs/api/index.html
 	    
-	    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.US);
 	    
 	    // declare and initialize testDate variable, this is what will hold
 	    // our converted string

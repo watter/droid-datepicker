@@ -3,6 +3,7 @@ package br.gov.pr.datepicker;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -19,7 +20,7 @@ public class TimeActivity extends Activity {
 		setContentView(R.layout.activity_time);
 
 				
-		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm", Locale.US);
 		CharSequence now = sdf.format(new java.util.Date());
 
 		Button botao = (Button)findViewById(R.id.btn_hour1);
@@ -65,7 +66,7 @@ public class TimeActivity extends Activity {
 	public boolean isValidTime(String date)
 	{
 	    
-	    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+	    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm", Locale.US);
 	    
 	    // declare and initialize testDate variable, this is what will hold
 	    // our converted string
