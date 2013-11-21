@@ -19,4 +19,12 @@ Actually, the code only supports 24h time format and European (dd/MM/YYYY) date
 format for simplicity.
 
 
+** Samples
+
+*** Date
+[[file:img/datepicker.png][Date Picker Sample]]
+
+*** Time
+[[file:img/timepicker.png][Time Picker Sample]]
+
 
