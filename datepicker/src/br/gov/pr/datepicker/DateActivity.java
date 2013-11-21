@@ -324,7 +324,7 @@ public class DateActivity extends Activity {
 		String strdecday ="01";
 		
 		if (decday < 1){
-			strdecday = "01";
+			strdecday = "31";
 		}else if (decday < 10){
 			strdecday = "0" + String.valueOf(decday);
 		}else{
@@ -356,7 +356,7 @@ public class DateActivity extends Activity {
 		String strdecmonth ="01";
 		
 		if (decmonth < 1){
-			strdecmonth = "01";
+			strdecmonth = "12";
 		}else if (decmonth < 10){
 			strdecmonth = "0" + String.valueOf(decmonth);
 		}else{
