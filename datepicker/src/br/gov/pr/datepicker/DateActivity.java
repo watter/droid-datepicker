@@ -56,6 +56,8 @@ public class DateActivity extends Activity {
 		botao = (Button)findViewById(R.id.button_y4);
 		botao.setText(today.subSequence(9, 10));
 
+		updateLongDate((View) findViewById(R.layout.activity_date));
+
 		
 	}
 
@@ -420,7 +422,7 @@ public class DateActivity extends Activity {
 		String strincday ="31";
 		
 		if (incday > 31){
-			strincday = "31";
+			strincday = "01";
 		}else if (incday < 10){
 			strincday = "0" + String.valueOf(incday);
 		}else{
@@ -453,7 +455,7 @@ public class DateActivity extends Activity {
 		String strincmonth ="12";
 		
 		if (incmonth > 12){
-			strincmonth = "12";
+			strincmonth = "01";
 		}else if (incmonth < 10){
 			strincmonth = "0" + String.valueOf(incmonth);
 		}else{
