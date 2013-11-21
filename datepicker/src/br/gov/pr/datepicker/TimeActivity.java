@@ -125,20 +125,39 @@ public class TimeActivity extends Activity {
 			strTimeToValidate = (String) val + btn_hour2.getText() + ":" + btn_min1.getText() + btn_min2.getText();
 			
 			// have to check and validate hour here to make sure hour and focus position would be right
+			/*
+			 * if butt > 2 
+			 *  if b1 =  1 then
+			 *  	if 1 +X == valid -> go ahead, turn to 1+X
+			 *  else
+			 *  	if 0 +X == valid -> go ahead, turn to 0+X
+			 *  fi
+			 * fi
+			 */
+			
+			
 			if (Integer.parseInt((String) val) > 2 ){
+
+				String strTimeToCheckDouble = "";
+				String newHour1="";
 				
-				String strTimeToCheckDouble = (String)  "0" + val + ":" + btn_min1.getText() + btn_min2.getText();
+				if (Integer.parseInt((String) btn_hour1.getText()) == 1 ){
+					newHour1 = "1";
+				} else {
+					newHour1 = "0";
+				}
+				
+				strTimeToCheckDouble = (String)  newHour1 + val + ":" + btn_min1.getText() + btn_min2.getText();
 
 				validated = isValidTime(strTimeToCheckDouble);
-		
+	
 				if (validated) {
 					// change both buttons to make sure that the entire hour will change
-					btn_hour1.setText("0");
+					btn_hour1.setText(newHour1);
 					btn_hour2.setText(val);
 					// change the button to make sure it goes to minute after changing hour
 					botao = btn_hour2;
-				} 
-
+				}
 				// make sure that the validation with the previous value will occur and "nothing" has changed
 				validated = false;
 			}
