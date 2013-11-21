@@ -18,8 +18,9 @@ public class TimeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_time);
 
-		android.text.format.DateFormat df = new android.text.format.DateFormat();
-		CharSequence now = df.format("HH:mm", new java.util.Date());
+				
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+		CharSequence now = sdf.format(new java.util.Date());
 
 		Button botao = (Button)findViewById(R.id.btn_hour1);
 		botao.setText(now.subSequence(0, 1));
