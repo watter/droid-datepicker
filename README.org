@@ -1,0 +1,22 @@
+* Droid DatePicker
+
+This is a project with some interfaces do input mainly numerical data on
+android.
+
+It first contains a DatePicker and a TimePicker that helps to fasten the input
+of these values on Android.
+
+I've seen many of them and choose the format based on simplicity and ease to
+use. 
+
+The design of the TimePicker was based on BussinessCalendar
+(https://play.google.com/store/apps/details?id=mikado.bizcalpro) time picker.
+
+
+** Date and Time Formats
+
+Actually, the code only supports 24h time format and European (dd/MM/YYYY) date
+format for simplicity.
+
+
+
