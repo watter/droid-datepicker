@@ -82,12 +82,17 @@ public class DateActivity extends Activity {
 		Button btn_y4 = (Button) findViewById(R.id.button_y4);  
 
 		String StrActualDate = (String) btn_d1.getText() + btn_d2.getText() + "/" + btn_m1.getText() + btn_m2.getText() + "/" + btn_y1.getText() + btn_y2.getText() + btn_y3.getText() + btn_y4.getText();
-		
 
-    	Intent intent = new Intent(this, MainActivity.class);
-    	intent.putExtra("DATE_SELECTED", StrActualDate);
-		setResult(RESULT_OK, intent);
-		finish();
+		Boolean validated = false;
+		
+		validated = isValidDate(StrActualDate);
+		
+		if (validated) {
+			Intent intent = new Intent(this, MainActivity.class);
+			intent.putExtra("DATE_SELECTED", StrActualDate);
+			setResult(RESULT_OK, intent);
+			finish();
+		}
 	}
 
 	public void updateLongDate(View v){
