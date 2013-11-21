@@ -333,10 +333,10 @@ public class DateActivity extends Activity {
 
 		// Atribui os valores
 		
-		Button botao = (Button)findViewById(R.id.button_d1);
+		Button botao = btn_d1;
 		botao.setText(strdecday.subSequence(0, 1));
 		
-		botao = (Button)findViewById(R.id.button_d2);
+		botao = btn_d2;
 		botao.setText(strdecday.subSequence(1, 2));
 
 		// atualiza campo de data na linha abaixo do ok
@@ -365,10 +365,10 @@ public class DateActivity extends Activity {
 
 		// Atribui os valores
 		
-		Button botao = (Button)findViewById(R.id.button_m1);
+		Button botao = btn_m1;
 		botao.setText(strdecmonth.subSequence(0, 1));
 		
-		botao = (Button)findViewById(R.id.button_m2);
+		botao = btn_m2;
 		botao.setText(strdecmonth.subSequence(1, 2));
 
 		// atualiza campo de data na linha abaixo do ok
@@ -397,16 +397,16 @@ public class DateActivity extends Activity {
 
 		// Atribui os valores
 		
-		Button botao = (Button)findViewById(R.id.button_y1);
+		Button botao = btn_y1;
 		botao.setText(strdecyear.subSequence(0, 1));
 		
-		botao = (Button)findViewById(R.id.button_y2);
+		botao = btn_y2;
 		botao.setText(strdecyear.subSequence(1, 2));
 
-		botao = (Button)findViewById(R.id.button_y3);
+		botao = btn_y3;
 		botao.setText(strdecyear.subSequence(2, 3));
 		
-		botao = (Button)findViewById(R.id.button_y4);
+		botao = btn_y4;
 		botao.setText(strdecyear.subSequence(3, 4));
 
 		// atualiza campo de data na linha abaixo do ok
@@ -436,10 +436,10 @@ public class DateActivity extends Activity {
 
 		// Atribui os valores
 		
-		Button botao = (Button)findViewById(R.id.button_d1);
+		Button botao = btn_d1;
 		botao.setText(strincday.subSequence(0, 1));
 		
-		botao = (Button)findViewById(R.id.button_d2);
+		botao = btn_d2;
 		botao.setText(strincday.subSequence(1, 2));
 
 		// atualiza campo de data na linha abaixo do ok
@@ -469,10 +469,10 @@ public class DateActivity extends Activity {
 
 		// Atribui os valores
 		
-		Button botao = (Button)findViewById(R.id.button_m1);
+		Button botao = btn_m1;
 		botao.setText(strincmonth.subSequence(0, 1));
 		
-		botao = (Button)findViewById(R.id.button_m2);
+		botao = btn_m2;
 		botao.setText(strincmonth.subSequence(1, 2));
 
 		// atualiza campo de data na linha abaixo do ok
@@ -502,16 +502,16 @@ public class DateActivity extends Activity {
 
 		// Atribui os valores
 		
-		Button botao = (Button)findViewById(R.id.button_y1);
+		Button botao = btn_y1;
 		botao.setText(strincyear.subSequence(0, 1));
 		
-		botao = (Button)findViewById(R.id.button_y2);
+		botao = btn_y2;
 		botao.setText(strincyear.subSequence(1, 2));
 
-		botao = (Button)findViewById(R.id.button_y3);
+		botao = btn_y3;
 		botao.setText(strincyear.subSequence(2, 3));
 		
-		botao = (Button)findViewById(R.id.button_y4);
+		botao = btn_y4;
 		botao.setText(strincyear.subSequence(3, 4));
 
 		// atualiza campo de data na linha abaixo do ok

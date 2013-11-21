@@ -3,7 +3,6 @@
 
     <string name="app_name">datepicker</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
     <string name="separador_data">/</string>
     <string name="botao_1">1</string>
     <string name="botao_2">2</string>

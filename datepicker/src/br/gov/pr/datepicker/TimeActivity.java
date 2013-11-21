@@ -308,10 +308,10 @@ public class TimeActivity extends Activity {
 
 		// Atribui os valores
 		
-		Button botao = (Button)findViewById(R.id.btn_hour1);
+		Button botao = btn_hour1;
 		botao.setText(strdecday.subSequence(0, 1));
 		
-		botao = (Button)findViewById(R.id.btn_hour2);
+		botao = btn_hour2;
 		botao.setText(strdecday.subSequence(1, 2));
 
 	}
@@ -339,10 +339,10 @@ public class TimeActivity extends Activity {
 
 		// Atribui os valores
 		
-		Button botao = (Button)findViewById(R.id.btn_hour1);
+		Button botao = btn_hour1;
 		botao.setText(strinchour.subSequence(0, 1));
 		
-		botao = (Button)findViewById(R.id.btn_hour2);
+		botao = btn_hour2;
 		botao.setText(strinchour.subSequence(1, 2));
 
 	}
