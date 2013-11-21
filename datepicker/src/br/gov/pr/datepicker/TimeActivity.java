@@ -113,9 +113,39 @@ public class TimeActivity extends Activity {
 		
 		switch (botao.getId()) {
 		case R.id.btn_hour1:
+
+			
+			// later I'll have to surround this test with a date style format to check if it's set to a 24h clock
+			if (val.equals("2")){
+				if (Integer.parseInt((String) btn_hour2.getText()) > 3 ){
+					btn_hour2.setText("0");
+				}
+			}
+			
 			strTimeToValidate = (String) val + btn_hour2.getText() + ":" + btn_min1.getText() + btn_min2.getText();
+			
+			// have to check and validate hour here to make sure hour and focus position would be right
+			if (Integer.parseInt((String) val) > 2 ){
+				
+				String strTimeToCheckDouble = (String)  "0" + val + ":" + btn_min1.getText() + btn_min2.getText();
+
+				validated = isValidTime(strTimeToCheckDouble);
+		
+				if (validated) {
+					// change both buttons to make sure that the entire hour will change
+					btn_hour1.setText("0");
+					btn_hour2.setText(val);
+					// change the button to make sure it goes to minute after changing hour
+					botao = btn_hour2;
+				} 
+
+				// make sure that the validation with the previous value will occur and "nothing" has changed
+				validated = false;
+			}
+
 			break;
 		case R.id.btn_hour2:
+
 			strTimeToValidate = (String) btn_hour1.getText() + val + ":" + btn_min1.getText() + btn_min2.getText();
 			break;
 
