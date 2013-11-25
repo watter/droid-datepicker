@@ -19,6 +19,11 @@ Actually, the code only supports 24h time format and European (dd/MM/YYYY) date
 format for simplicity.
 
 
+** SDK
+
+It was tested with SDK 10 and should work with earlier versions ;-) 
+
+
 ** Samples
 
 *** Date
