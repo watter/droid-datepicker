@@ -16,39 +16,52 @@
         <activity
             android:name="br.gov.pr.datepicker.MainActivity"
             android:label="@string/app_name" >
-            
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            
         </activity>
         <activity
             android:name="br.gov.pr.datepicker.DateActivity"
-            android:label="@string/title_activity_date" android:launchMode="singleTop"
-            android:parentActivityName="br.gov.pr.datepicker.MainActivity"
-            android:theme="@android:style/Theme.Light"
-            >
-<!-- android:theme="@android:style/Theme.Holo.Dialog" - faz com que a activity apareça como sendo um tema de diálogo -->
-            
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="br.gov.pr.datepicker.MainActivity" />
-            
-        </activity>
-        <activity
-            android:name="br.gov.pr.datepicker.TimeActivity"
-            android:label="@string/title_activity_time" 
+            android:label="@string/title_activity_date"
+            android:launchMode="singleTop"
             android:parentActivityName="br.gov.pr.datepicker.MainActivity"
             android:theme="@android:style/Theme.Light" >
+
+            <!-- android:theme="@android:style/Theme.Holo.Dialog" - faz com que a activity apareça como sendo um tema de diálogo -->
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="br.gov.pr.datepicker.MainActivity" />
-            
         </activity>
-        
+        <activity
+            android:name="br.gov.pr.datepicker.TimeActivity"
+            android:label="@string/title_activity_time"
+            android:parentActivityName="br.gov.pr.datepicker.MainActivity"
+            android:theme="@android:style/Theme.Light" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.gov.pr.datepicker.MainActivity" />
+        </activity>
+        <activity
+            android:name="br.gov.pr.datepicker.NumberActivity"
+            android:label="@string/title_activity_number"
+            android:parentActivityName="br.gov.pr.datepicker.MainActivity"
+            android:theme="@android:style/Theme.Light" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.gov.pr.datepicker.MainActivity" />
+        </activity>
+        <activity
+            android:name="br.gov.pr.datepicker.FullNumberActivity"
+            android:label="@string/title_activity_full_number" 
+            android:parentActivityName="br.gov.pr.datepicker.MainActivity"
+            android:theme="@android:style/Theme.Light">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.gov.pr.datepicker.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ public class MainActivity extends Activity {
 	
 	static final int SELECT_DATE = 0;
 	static final int SELECT_TIME = 1;
+	static final int SELECT_NUMBER = 2;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,11 @@ public class MainActivity extends Activity {
     	startActivityForResult(intent, SELECT_TIME);
     }
 
+    public void onClickNumber(View v){
+    	Intent intent = new Intent(this, NumberActivity.class);
+    	startActivityForResult(intent, SELECT_NUMBER);
+    }
+
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == SELECT_DATE) {
             if (resultCode == RESULT_OK) {
@@ -52,9 +58,13 @@ public class MainActivity extends Activity {
                 // Recupera da intent recebida no resultado o parametro TIME_SELECTED colocado na intent que veio no resultado
                 b.setText(data.getExtras().getString("TIME_SELECTED"));
             }
+        } else if (requestCode == SELECT_NUMBER) {
+            if (resultCode == RESULT_OK) {
+                Button b = (Button) findViewById(R.id.button_res);
+                // Recupera da intent recebida no resultado o parametro TIME_SELECTED colocado na intent que veio no resultado
+                b.setText(data.getExtras().getString("NUMBER_SELECTED"));
+            }
         }
-
-        
     }
     
 
