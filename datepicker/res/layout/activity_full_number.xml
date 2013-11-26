@@ -38,7 +38,7 @@
         android:id="@+id/tableRow2"
         android:paddingTop="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="40dp" >
 
         <Button
             android:id="@+id/button1"
@@ -46,7 +46,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
-            android:text="Del" />
+            android:text="@string/del" />
 
         <Button
             android:id="@+id/button2"
@@ -54,7 +54,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".7"
-            android:text="\@" />
+            android:text="@string/arroba"
+            android:textColor="#449dff" />
 
         <Button
             android:id="@+id/button3"
@@ -78,7 +79,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".7"
-            android:text="#" />
+            android:text="@string/cerquilha"
+            android:textColor="#39007e" />
 
         <Button
             android:id="@+id/button6"
@@ -93,23 +95,28 @@
     <TableRow
         android:id="@+id/tableRow3"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="40dp" >
 
         <Button
             android:id="@+id/button7"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="0.7"
-            android:text="\?" />
+            android:background="#8b6754"
+            android:text="@string/interrogacao"
+            android:textColor="#00d1fe"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button8"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="0.7"
-            android:text="/" />
+            android:text="@string/barra_divisao"
+            android:background="#f3ffac"
+            android:textColor="#ff0000" />
 
         <Button
             android:id="@+id/button9"
@@ -117,7 +124,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="1" />
+            android:text="@string/botao_1" />
 
         <Button
             android:id="@+id/button10"
@@ -125,7 +132,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="2" />
+            android:text="@string/botao_2" />
 
         <Button
             android:id="@+id/button11"
@@ -133,7 +140,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="3" />
+            android:text="@string/botao_3" />
 
         <Button
             android:id="@+id/button12"
@@ -141,7 +148,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:text="*" />
+            android:text="@string/multiplicacao"
+            android:textColor="#178300" />
 
         <Button
             android:id="@+id/button13"
@@ -149,13 +157,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:text="+-" />
+            android:text="@string/mais_menos"
+            android:textColor="#4bab8f" />
+
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow4"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="40dp" >
 
         <Button
             android:id="@+id/button14"
@@ -164,7 +174,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
             android:longClickable="true"
-            android:text="[{" />
+            android:text="[{"
+            android:textColor="#ff9100" />
 
         <Button
             android:id="@+id/button15"
@@ -172,7 +183,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:text="(" />
+            android:text="@string/parentese_esquerdo"
+            android:textColor="#68a8ff" />
 
         <Button
             android:id="@+id/button16"
@@ -180,7 +192,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="4" />
+            android:text="@string/botao_4" />
 
         <Button
             android:id="@+id/button17"
@@ -188,7 +200,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="5" />
+            android:text="@string/botao_5" />
 
         <Button
             android:id="@+id/button18"
@@ -196,7 +208,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="6" />
+            android:text="@string/botao_6" />
 
         <Button
             android:id="@+id/button19"
@@ -204,7 +216,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:text=")" />
+            android:text="@string/parentese_direito"
+            android:textColor="#68a8ff" />
 
         <Button
             android:id="@+id/button20"
@@ -213,22 +226,24 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
             android:longClickable="true"
-            android:text="]}" />
+            android:text="]}"
+            android:textColor="#ff9100" />
 
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow5"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="40dp" >
 
         <Button
             android:id="@+id/button21"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="0.7"
-            android:text="%" />
+            android:text="@string/porcento"
+            android:textColor="#ff004d" />
 
         <Button
             android:id="@+id/button22"
@@ -236,7 +251,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:text=":" />
+            android:text="@string/dois_pontos"
+            android:textColor="#2d35ff" />
 
         <Button
             android:id="@+id/button23"
@@ -244,7 +260,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="7" />
+            android:text="@string/botao_7" />
 
         <Button
             android:id="@+id/button24"
@@ -252,7 +268,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="8" />
+            android:text="@string/botao_8" />
 
         <Button
             android:id="@+id/button25"
@@ -260,7 +276,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="9" />
+            android:text="@string/botao_9" />
 
         <Button
             android:id="@+id/button26"
@@ -268,7 +284,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:text=";" />
+            android:text="@string/ponto_virgula"
+            android:textColor="#b75fff" />
 
         <Button
             android:id="@+id/button27"
@@ -276,13 +293,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:text="$" />
+            android:text="@string/dolar"
+            android:textColor="#4cae37" />
+
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow6"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="40dp" >
 
         <Button
             android:id="@+id/button28"
@@ -290,7 +309,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:text="!" />
+            android:text="@string/exclamacao"
+            android:textColor="#ff7800" />
 
         <Button
             android:id="@+id/button29"
@@ -298,7 +318,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:text="-" />
+            android:text="@string/menos"
+            android:textColor="#ff0c00" />
 
         <Button
             android:id="@+id/button30"
@@ -306,7 +327,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="," />
+            android:text="@string/virgula"
+            android:textColor="#fc00c6" />
 
         <Button
             android:id="@+id/button31"
@@ -314,7 +336,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="0" />
+            android:text="@string/botao_0" />
 
         <Button
             android:id="@+id/button32"
@@ -322,7 +344,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="." />
+            android:text="@string/ponto"
+            android:textColor="#0000ff" />
 
         <Button
             android:id="@+id/button33"
@@ -330,7 +353,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:text="+" />
+            android:text="@string/mais"
+            android:textColor="#1db100" />
 
         <Button
             android:id="@+id/button34"
@@ -338,13 +362,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:text="=" />
+            android:text="@string/igual" />
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow7"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:paddingTop="20dp" >
 
         <Button
@@ -353,7 +377,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="OK" />
+            android:text="@string/ok" />
 
     </TableRow>
 

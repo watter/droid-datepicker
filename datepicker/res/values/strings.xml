@@ -30,5 +30,27 @@
     <string name="title_activity_date">Data</string>
     <string name="title_activity_time">Hora</string>
     <string name="separador_hora">:</string>
+    <string name="title_activity_number">Número</string>
+    <string name="title_activity_full_number">FullNumberActivity</string>
+    <string name="arroba">@</string>
+    <string name="del">Del</string>
+    <string name="interrogacao">?</string>
+    <string name="barra_divisao">/</string>
+    <string name="multiplicacao">*</string>
+    <string name="mais_menos">+-</string>
+    <string name="parentese_esquerdo">(</string>
+    <string name="parentese_direito">)</string>
+    <string name="porcento">%</string>
+    <string name="dois_pontos">:</string>
+    <string name="ponto_virgula">;</string>
+    <string name="dolar">$</string>
+    <string name="exclamacao">!</string>
+    <string name="menos">-</string>
+    <string name="virgula">,</string>
+    <string name="ponto">.</string>
+    <string name="mais">+</string>
+    <string name="igual">=</string>
+    <string name="ok">OK</string>
+    <string name="cerquilha">#</string>
 
 </resources>
