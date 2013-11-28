@@ -15,17 +15,18 @@
         android:layout_height="wrap_content" >
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/numbers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_weight="1"
             android:clickable="false"
             android:ems="10"
-            android:focusable="false"
+            android:focusable="true"
+            android:onClick="onChangeLayout"
             android:focusableInTouchMode="false"
             android:gravity="center_vertical|right"
-            android:inputType="numberSigned"
+            android:inputType="text"
             android:maxLines="1"
             android:scrollHorizontally="true" >
 
@@ -41,54 +42,60 @@
         android:layout_height="40dp" >
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/button_del"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
-            android:text="@string/del" />
+            android:text="@string/del" 
+			android:onClick="onClickDel" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button_at"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".7"
             android:text="@string/arroba"
-            android:textColor="#449dff" />
+            android:textColor="#449dff" 
+			android:onClick="onClickAt" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button_left_arrow"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.3"
-            android:text="&lt;-" />
+            android:text="&lt;-" 
+			android:onClick="onClick_leftArrow" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/button_right_arrow"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.3"
-            android:text="->" />
+            android:text="->" 
+			android:onClick="onClick_rightArrow" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/button_hash"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".7"
             android:text="@string/cerquilha"
-            android:textColor="#39007e" />
+            android:textColor="#39007e" 
+			android:onClick="onClickHash" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/button_backspace"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
-            android:text="BS" />
+            android:text="BS" 
+			android:onClick="onClickBackspace" />
 
     </TableRow>
 
@@ -98,67 +105,76 @@
         android:layout_height="40dp" >
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/button_question"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="0.7"
-            android:background="#8b6754"
             android:text="@string/interrogacao"
             android:textColor="#00d1fe"
-            android:textStyle="bold" />
+            android:textStyle="bold" 
+			android:onClick="onClickQuestion" />
 
+        <!--             android:background="#8b6754" -->
+        
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/button_slash"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="0.7"
             android:text="@string/barra_divisao"
-            android:background="#f3ffac"
-            android:textColor="#ff0000" />
+            android:textColor="#ff0000" 
+			android:onClick="onClickSlash" />
 
+        <!--  android:background="#f3ffac" -->
+        
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/button_1"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="@string/botao_1" />
+            android:text="@string/botao_1" 
+			android:onClick="onClick1" />
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/button_2"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="@string/botao_2" />
+            android:text="@string/botao_2" 
+			android:onClick="onClick2" />
 
         <Button
-            android:id="@+id/button11"
+            android:id="@+id/button_3"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="@string/botao_3" />
+            android:text="@string/botao_3" 
+			android:onClick="onClick3" />
 
         <Button
-            android:id="@+id/button12"
+            android:id="@+id/button_asterisc"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
             android:text="@string/multiplicacao"
-            android:textColor="#178300" />
+            android:textColor="#178300" 
+			android:onClick="onClickAsterisc" />
 
         <Button
-            android:id="@+id/button13"
+            android:id="@+id/button_plus_and_minus"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
             android:text="@string/mais_menos"
-            android:textColor="#4bab8f" />
+            android:textColor="#4bab8f" 
+			android:onClick="onClick_plus_andMinus" />
 
     </TableRow>
 
@@ -168,66 +184,74 @@
         android:layout_height="40dp" >
 
         <Button
-            android:id="@+id/button14"
+            android:id="@+id/button_left_square_curly_braces"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="0.7"
             android:longClickable="true"
-            android:text="[{"
-            android:textColor="#ff9100" />
+            android:text="@string/left_square_curly_braces"
+            android:textColor="#ff9100" 
+			android:onClick="onClick_left_square_curlyBraces" />
 
         <Button
-            android:id="@+id/button15"
+            android:id="@+id/button_left_parenthesis"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="0.7"
             android:text="@string/parentese_esquerdo"
-            android:textColor="#68a8ff" />
+            android:textColor="#68a8ff"
+            android:textStyle="bold" 
+			android:onClick="onClick_leftParenthesis" />
 
         <Button
-            android:id="@+id/button16"
+            android:id="@+id/button_4"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="@string/botao_4" />
+            android:text="@string/botao_4" 
+			android:onClick="onClick4" />
 
         <Button
-            android:id="@+id/button17"
+            android:id="@+id/button_5"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="@string/botao_5" />
+            android:text="@string/botao_5" 
+			android:onClick="onClick5" />
 
         <Button
-            android:id="@+id/button18"
+            android:id="@+id/button_6"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="@string/botao_6" />
+            android:text="@string/botao_6" 
+			android:onClick="onClick6" />
 
         <Button
-            android:id="@+id/button19"
+            android:id="@+id/button_right_parenthesis"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
             android:text="@string/parentese_direito"
-            android:textColor="#68a8ff" />
+            android:textColor="#68a8ff" 
+			android:onClick="onClick_rightParenthesis" />
 
         <Button
-            android:id="@+id/button20"
+            android:id="@+id/button_right_square_curly_braces"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
             android:longClickable="true"
             android:text="]}"
-            android:textColor="#ff9100" />
+            android:textColor="#ff9100" 
+			android:onClick="onClick_right_square_curlyBraces" />
 
     </TableRow>
 
@@ -237,64 +261,71 @@
         android:layout_height="40dp" >
 
         <Button
-            android:id="@+id/button21"
+            android:id="@+id/button_percent"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="0.7"
             android:text="@string/porcento"
-            android:textColor="#ff004d" />
+            android:textColor="#ff004d" 
+			android:onClick="onClickPercent" />
 
         <Button
-            android:id="@+id/button22"
+            android:id="@+id/button_colon"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="0.7"
             android:text="@string/dois_pontos"
-            android:textColor="#2d35ff" />
+            android:textColor="#2d35ff" 
+			android:onClick="onClickColon" />
 
         <Button
-            android:id="@+id/button23"
+            android:id="@+id/button_7"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="@string/botao_7" />
+            android:text="@string/botao_7" 
+			android:onClick="onClick7" />
 
         <Button
-            android:id="@+id/button24"
+            android:id="@+id/button_8"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="@string/botao_8" />
+            android:text="@string/botao_8" 
+			android:onClick="onClick8" />
 
         <Button
-            android:id="@+id/button25"
+            android:id="@+id/button_9"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="@string/botao_9" />
+            android:text="@string/botao_9" 
+			android:onClick="onClick9" />
 
         <Button
-            android:id="@+id/button26"
+            android:id="@+id/button_semicolon"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
             android:text="@string/ponto_virgula"
-            android:textColor="#b75fff" />
+            android:textColor="#b75fff" 
+			android:onClick="onClickSemicolon" />
 
         <Button
-            android:id="@+id/button27"
+            android:id="@+id/button_dolar"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
             android:text="@string/dolar"
-            android:textColor="#4cae37" />
+            android:textColor="#4cae37" 
+			android:onClick="onClickDolar" />
 
     </TableRow>
 
@@ -304,65 +335,77 @@
         android:layout_height="40dp" >
 
         <Button
-            android:id="@+id/button28"
+            android:id="@+id/button_exclamation"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="0.7"
             android:text="@string/exclamacao"
-            android:textColor="#ff7800" />
+            android:textColor="#ff7800" 
+			android:onClick="onClickExclamation" />
 
         <Button
-            android:id="@+id/button29"
+            android:id="@+id/button_minus"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="0.7"
             android:text="@string/menos"
-            android:textColor="#ff0c00" />
+            android:textColor="#ff0c00" 
+			android:onClick="onClickMinus" />
 
         <Button
-            android:id="@+id/button30"
+            android:id="@+id/button_comma"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="1.4"
             android:text="@string/virgula"
-            android:textColor="#fc00c6" />
+            android:textColor="#fc00c6" 
+			android:onClick="onClickComma" />
 
         <Button
-            android:id="@+id/button31"
+            android:id="@+id/button_0"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.4"
-            android:text="@string/botao_0" />
+            android:text="@string/botao_0" 
+			android:onClick="onClick0" />
 
         <Button
-            android:id="@+id/button32"
+            android:id="@+id/button_period"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="1.4"
             android:text="@string/ponto"
-            android:textColor="#0000ff" />
+            android:textColor="#0000ff"
+            android:textSize="18sp" 
+			android:onClick="onClickPeriod" />
 
         <Button
-            android:id="@+id/button33"
+            android:id="@+id/button_plus"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="0.7"
             android:text="@string/mais"
-            android:textColor="#1db100" />
+            android:textColor="#1db100"
+            android:textSize="18sp"
+            android:textStyle="bold" 
+			android:onClick="onClickPlus" />
 
+        <!--             android:background="#c3c3c3" -->
+        
         <Button
-            android:id="@+id/button34"
+            android:id="@+id/button_equal"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:text="@string/igual" />
+            android:text="@string/igual" 
+			android:onClick="onClickEqual" />
     </TableRow>
 
     <TableRow
@@ -372,12 +415,13 @@
         android:paddingTop="20dp" >
 
         <Button
-            android:id="@+id/button35"
+            android:id="@+id/button_ok"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/ok" />
+            android:text="@string/ok" 
+			android:onClick="onClickOk" />
 
     </TableRow>
 

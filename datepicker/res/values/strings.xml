@@ -32,9 +32,9 @@
     <string name="separador_hora">:</string>
     <string name="title_activity_number">Número</string>
     <string name="title_activity_full_number">FullNumberActivity</string>
-    <string name="arroba">@</string>
+    <string name="arroba">\@</string>
     <string name="del">Del</string>
-    <string name="interrogacao">?</string>
+    <string name="interrogacao">\?</string>
     <string name="barra_divisao">/</string>
     <string name="multiplicacao">*</string>
     <string name="mais_menos">+-</string>
@@ -52,5 +52,6 @@
     <string name="igual">=</string>
     <string name="ok">OK</string>
     <string name="cerquilha">#</string>
+    <string name="left_square_curly_braces">[{</string>
 
 </resources>
