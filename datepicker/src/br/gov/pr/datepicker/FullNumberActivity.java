@@ -6,6 +6,7 @@ import android.text.Html;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnLongClickListener;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -24,15 +25,20 @@ public class FullNumberActivity extends Activity {
 			Button b = (Button) findViewById(R.id.button_left_square_curly_braces);
 			b.setOnLongClickListener(onLongClick(findViewById(R.layout.activity_full_number)));
 		 */
-
+		
+		// impede o teclado de aparecer, já que os únicos botões que poderão ser pressionados estão na tela
+		this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 	}
 
 	
 	public void onChangeLayout(View v){
 
+
+		this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
 		/*
 		 * não está funcionando :/
-		 */
+
 		setContentView(R.layout.activity_number);
 		
 		if (! FullLayout){
@@ -42,6 +48,7 @@ public class FullNumberActivity extends Activity {
 			setContentView(R.layout.activity_full_number);
 			FullLayout=true;
 		}
+		 */
 		 
 	}
 	
@@ -56,14 +63,42 @@ public class FullNumberActivity extends Activity {
 
 	public void updateNumbers (View v, String c){
 		EditText e = (EditText) findViewById(R.id.numbers);
-		CharSequence cs = e.getText().append(c);
-		e.setText(cs);
+		/* pego a posição atual
+		 * e insiro o texto onde está o cursor
+		 */
+		int curPos = e.getSelectionStart();
+		String str = e.getText().toString();
+
+		String str1 = (String) str.substring(0, curPos);
+		String str2 = (String) str.substring(curPos);
+
+		e.setText(str1+c+str2);
+		e.setSelection(curPos);
+
 	}
 
 
 	public void onClickDel (View v){
+		EditText e = (EditText) findViewById(R.id.numbers);
 		
+		int curPos = e.getSelectionStart();
+		int eLength = e.getText().toString().length();
 		
+		int endString = eLength;
+		
+		if ( (curPos + 1) > eLength )
+			endString = eLength;
+		else
+			endString = curPos + 1;
+		
+		String str = e.getText().toString();
+		
+		String str1 = (String) str.substring(0, curPos);
+		String str2 = (String) str.substring(endString);
+
+		e.setText(str1+str2);
+		e.setSelection(curPos);
+	
 	}
 
 	public void onClickAt (View v){
@@ -73,7 +108,11 @@ public class FullNumberActivity extends Activity {
 	public void onClick_leftArrow (View v){
 		EditText e = (EditText) findViewById(R.id.numbers);
 		int cursorPosition = e.getSelectionStart();
-		e.setSelection( cursorPosition -1);
+		if (cursorPosition > 0 ){
+			e.setSelection( cursorPosition -1);
+		}else{
+			e.setSelection( cursorPosition);
+		}
 	}
 
 	public void onClick_rightArrow (View v){
@@ -87,6 +126,28 @@ public class FullNumberActivity extends Activity {
 	}
 
 	public void onClickBackspace (View v){
+		
+		EditText e = (EditText) findViewById(R.id.numbers);
+		
+		int curPos = e.getSelectionStart();
+
+		String str = e.getText().toString();
+
+		String str1 = "";
+		
+		// safety check. Do not trespass start boundary 
+		int inicioString = 0; 
+		if ( (curPos -1) < 0 ) 
+			inicioString = curPos;
+		else
+			inicioString = curPos-1;
+			
+		str1 = (String) str.substring(0, inicioString);
+		String str2 = (String) str.substring(curPos);
+
+		e.setText(str1+str2);
+		e.setSelection(inicioString);
+		
 	}
 
 	public void onClickQuestion (View v){

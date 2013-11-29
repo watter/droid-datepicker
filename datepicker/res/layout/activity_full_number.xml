@@ -23,14 +23,12 @@
             android:clickable="false"
             android:ems="10"
             android:focusable="true"
-            android:onClick="onChangeLayout"
-            android:focusableInTouchMode="false"
+            android:focusableInTouchMode="true"
             android:gravity="center_vertical|right"
             android:inputType="text"
             android:maxLines="1"
+            android:cursorVisible="true"
             android:scrollHorizontally="true" >
-
-            <requestFocus />
         </EditText>
 
     </TableRow>
@@ -422,7 +420,7 @@
             android:layout_weight="1"
             android:text="@string/ok" 
 			android:onClick="onClickOk" />
-
+			<requestFocus />
     </TableRow>
 
 </TableLayout>
