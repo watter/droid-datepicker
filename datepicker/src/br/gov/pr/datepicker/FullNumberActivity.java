@@ -19,15 +19,46 @@ public class FullNumberActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_full_number);
 
-		/*
-		 * Adicionando o evento de long click no botão {[
-		 * 
-			Button b = (Button) findViewById(R.id.button_left_square_curly_braces);
-			b.setOnLongClickListener(onLongClick(findViewById(R.layout.activity_full_number)));
-		 */
 		
 		// impede o teclado de aparecer, já que os únicos botões que poderão ser pressionados estão na tela
 		this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+		
+
+		/*
+		 * Adicionando o evento de long click no botão {[
+		 * 
+		 */
+
+		Button button = (Button) findViewById(R.id.button_left_square_curly_braces);
+
+		button.setOnLongClickListener(new OnLongClickListener() { 
+		        @Override
+		        public boolean onLongClick(View v) {
+		            // TODO Auto-generated method stub
+		    		updateNumbers(v, "{");
+		            return true;
+		        }
+		    });
+
+		
+		/*
+		 * Adicionando o evento de long click no botão ]}
+		 * 
+		 */
+
+		button = (Button) findViewById(R.id.button_right_square_curly_braces);
+
+		button.setOnLongClickListener(new OnLongClickListener() { 
+		        @Override
+		        public boolean onLongClick(View v) {
+		            // TODO Auto-generated method stub
+		    		updateNumbers(v, "}");
+		            return true;
+		        }
+		    });
+		
+
+		
 	}
 
 	
