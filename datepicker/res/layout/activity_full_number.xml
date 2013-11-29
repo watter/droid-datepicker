@@ -86,15 +86,15 @@
             android:textColor="#39007e" 
 			android:onClick="onClickHash" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button_backspace"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
-            android:text="BS" 
-			android:onClick="onClickBackspace" />
-
+            android:onClick="onClickBackspace"
+	        android:src="@drawable/ic_input_delete" />
+        
     </TableRow>
 
     <TableRow
