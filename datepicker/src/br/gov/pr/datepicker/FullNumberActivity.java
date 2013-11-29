@@ -52,7 +52,11 @@ public class FullNumberActivity extends Activity {
 		        }
 		    });
 		
-
+		/*
+		 * Impede o teclado de aparecer ao clicar no EditText e mantém o cursor aparecendo ;-)
+		 */
+		EditText e = (EditText) findViewById(R.id.numbers);
+		e.setKeyListener(null);
 		
 	}
 
