@@ -165,14 +165,14 @@
 			android:onClick="onClickAsterisc" />
 
         <Button
-            android:id="@+id/button_plus_and_minus"
+            android:id="@+id/button_equal"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:text="@string/mais_menos"
-            android:textColor="#4bab8f" 
-			android:onClick="onClick_plus_andMinus" />
+            android:text="@string/igual"
+            android:background="@drawable/selected_field" 
+			android:onClick="onClickEqual" />
 
     </TableRow>
 
@@ -397,13 +397,14 @@
         <!--             android:background="#c3c3c3" -->
         
         <Button
-            android:id="@+id/button_equal"
+            android:id="@+id/button_space"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:text="@string/igual" 
-			android:onClick="onClickEqual" />
+            android:text="@string/space" 
+            android:background="@drawable/black_underline"
+			android:onClick="onClickSpace" />
     </TableRow>
 
     <TableRow

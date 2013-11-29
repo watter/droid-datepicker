@@ -197,7 +197,8 @@ public class FullNumberActivity extends Activity {
 		updateNumbers(v, "*");
 	}
 
-	public void onClick_plus_andMinus (View v){
+	public void onClickSpace (View v){
+		updateNumbers(v, " ");
 	}
 
 	public void onClick_left_square_curlyBraces (View v){
