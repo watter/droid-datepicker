@@ -17,7 +17,7 @@
         <EditText
             android:id="@+id/numbers"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_gravity="right"
             android:layout_weight="1"
             android:clickable="false"
@@ -37,13 +37,13 @@
         android:id="@+id/tableRow2"
         android:paddingTop="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="40dp" >
+        android:layout_height="45dp" >
 
         <Button
             android:id="@+id/button_del"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1.5"
             android:text="@string/del" 
 			android:onClick="onClickDel" />
@@ -52,7 +52,7 @@
             android:id="@+id/button_at"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight=".7"
             android:text="@string/arroba"
             android:textColor="#449dff" 
@@ -62,7 +62,7 @@
             android:id="@+id/button_left_arrow"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1.3"
             android:text="&lt;-" 
 			android:onClick="onClick_leftArrow" />
@@ -71,7 +71,7 @@
             android:id="@+id/button_right_arrow"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1.3"
             android:text="->" 
 			android:onClick="onClick_rightArrow" />
@@ -80,7 +80,7 @@
             android:id="@+id/button_hash"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight=".7"
             android:text="@string/cerquilha"
             android:textColor="#39007e" 
@@ -90,7 +90,7 @@
             android:id="@+id/button_backspace"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1.5"
             android:onClick="onClickBackspace"
 	        android:src="@drawable/ic_input_delete" />
@@ -100,17 +100,18 @@
     <TableRow
         android:id="@+id/tableRow3"
         android:layout_width="wrap_content"
-        android:layout_height="40dp" >
+        android:layout_height="45dp" >
 
         <Button
             android:id="@+id/button_question"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_weight="0.7"
             android:text="@string/interrogacao"
             android:textColor="#00d1fe"
             android:textStyle="bold" 
+            android:background="#8b6754"
 			android:onClick="onClickQuestion" />
 
         <!--             android:background="#8b6754" -->
@@ -119,10 +120,11 @@
             android:id="@+id/button_slash"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_weight="0.7"
             android:text="@string/barra_divisao"
             android:textColor="#ff0000" 
+            android:background="#f3ffac"
 			android:onClick="onClickSlash" />
 
         <!--  android:background="#f3ffac" -->
@@ -131,7 +133,7 @@
             android:id="@+id/button_1"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1.4"
             android:text="@string/botao_1" 
 			android:onClick="onClick1" />
@@ -140,7 +142,7 @@
             android:id="@+id/button_2"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1.4"
             android:text="@string/botao_2" 
 			android:onClick="onClick2" />
@@ -149,7 +151,7 @@
             android:id="@+id/button_3"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1.4"
             android:text="@string/botao_3" 
 			android:onClick="onClick3" />
@@ -158,17 +160,18 @@
             android:id="@+id/button_asterisc"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="0.7"
             android:text="@string/multiplicacao"
-            android:textColor="#178300" 
+            android:textColor="#178300"
+            android:background="@drawable/selected_field" 
 			android:onClick="onClickAsterisc" />
 
         <Button
             android:id="@+id/button_equal"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="0.7"
             android:text="@string/igual"
             android:background="@drawable/selected_field" 
@@ -179,13 +182,13 @@
     <TableRow
         android:id="@+id/tableRow4"
         android:layout_width="wrap_content"
-        android:layout_height="40dp" >
+        android:layout_height="45dp" >
 
         <Button
             android:id="@+id/button_left_square_curly_braces"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_weight="0.7"
             android:longClickable="true"
             android:text="@string/left_square_curly_braces"
@@ -196,7 +199,7 @@
             android:id="@+id/button_left_parenthesis"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_weight="0.7"
             android:text="@string/parentese_esquerdo"
             android:textColor="#68a8ff"
@@ -207,7 +210,7 @@
             android:id="@+id/button_4"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1.4"
             android:text="@string/botao_4" 
 			android:onClick="onClick4" />
@@ -216,7 +219,7 @@
             android:id="@+id/button_5"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1.4"
             android:text="@string/botao_5" 
 			android:onClick="onClick5" />
@@ -225,7 +228,7 @@
             android:id="@+id/button_6"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1.4"
             android:text="@string/botao_6" 
 			android:onClick="onClick6" />
@@ -234,7 +237,7 @@
             android:id="@+id/button_right_parenthesis"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="0.7"
             android:text="@string/parentese_direito"
             android:textColor="#68a8ff" 
@@ -244,7 +247,7 @@
             android:id="@+id/button_right_square_curly_braces"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="0.7"
             android:longClickable="true"
             android:text="]}"
@@ -256,13 +259,13 @@
     <TableRow
         android:id="@+id/tableRow5"
         android:layout_width="wrap_content"
-        android:layout_height="40dp" >
+        android:layout_height="45dp" >
 
         <Button
             android:id="@+id/button_percent"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_weight="0.7"
             android:text="@string/porcento"
             android:textColor="#ff004d" 
@@ -272,7 +275,7 @@
             android:id="@+id/button_colon"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_weight="0.7"
             android:text="@string/dois_pontos"
             android:textColor="#2d35ff" 
@@ -282,7 +285,7 @@
             android:id="@+id/button_7"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1.4"
             android:text="@string/botao_7" 
 			android:onClick="onClick7" />
@@ -291,7 +294,7 @@
             android:id="@+id/button_8"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1.4"
             android:text="@string/botao_8" 
 			android:onClick="onClick8" />
@@ -300,7 +303,7 @@
             android:id="@+id/button_9"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1.4"
             android:text="@string/botao_9" 
 			android:onClick="onClick9" />
@@ -309,7 +312,7 @@
             android:id="@+id/button_semicolon"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="0.7"
             android:text="@string/ponto_virgula"
             android:textColor="#b75fff" 
@@ -319,7 +322,7 @@
             android:id="@+id/button_dolar"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="0.7"
             android:text="@string/dolar"
             android:textColor="#4cae37" 
@@ -330,13 +333,13 @@
     <TableRow
         android:id="@+id/tableRow6"
         android:layout_width="wrap_content"
-        android:layout_height="40dp" >
+        android:layout_height="45dp" >
 
         <Button
             android:id="@+id/button_exclamation"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_weight="0.7"
             android:text="@string/exclamacao"
             android:textColor="#ff7800" 
@@ -346,17 +349,18 @@
             android:id="@+id/button_minus"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_weight="0.7"
             android:text="@string/menos"
             android:textColor="#ff0c00" 
-			android:onClick="onClickMinus" />
+            android:background="@drawable/round_blue"
+            android:onClick="onClickMinus" />
 
         <Button
             android:id="@+id/button_comma"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_weight="1.4"
             android:text="@string/virgula"
             android:textColor="#fc00c6" 
@@ -366,7 +370,7 @@
             android:id="@+id/button_0"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1.4"
             android:text="@string/botao_0" 
 			android:onClick="onClick0" />
@@ -375,7 +379,7 @@
             android:id="@+id/button_period"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_weight="1.4"
             android:text="@string/ponto"
             android:textColor="#0000ff"
@@ -386,7 +390,7 @@
             android:id="@+id/button_plus"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_weight="0.7"
             android:text="@string/mais"
             android:textColor="#1db100"
@@ -400,7 +404,7 @@
             android:id="@+id/button_space"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="0.7"
             android:text="@string/space" 
             android:background="@drawable/black_underline"
@@ -410,18 +414,19 @@
     <TableRow
         android:id="@+id/tableRow7"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         android:paddingTop="20dp" >
 
         <Button
             android:id="@+id/button_ok"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1"
             android:text="@string/ok" 
 			android:onClick="onClickOk" />
 			<requestFocus />
     </TableRow>
+
 
 </TableLayout>
