@@ -19,11 +19,6 @@ public class FullNumberActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_full_number);
 
-		
-		// impede o teclado de aparecer, já que os únicos botões que poderão ser pressionados estão na tela
-		this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-		
-
 		/*
 		 * Adicionando o evento de long click no botão {[
 		 * 
@@ -66,20 +61,6 @@ public class FullNumberActivity extends Activity {
 
 
 		this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-
-		/*
-		 * não está funcionando :/
-
-		setContentView(R.layout.activity_number);
-		
-		if (! FullLayout){
-			setContentView(R.layout.activity_number);
-			FullLayout=false;
-		}else{
-			setContentView(R.layout.activity_full_number);
-			FullLayout=true;
-		}
-		 */
 		 
 	}
 	
@@ -104,7 +85,8 @@ public class FullNumberActivity extends Activity {
 		String str2 = (String) str.substring(curPos);
 
 		e.setText(str1+c+str2);
-		e.setSelection(curPos);
+		//e.setSelection(curPos);
+		e.setSelection(e.getText().toString().length());
 
 	}
 
@@ -149,7 +131,13 @@ public class FullNumberActivity extends Activity {
 	public void onClick_rightArrow (View v){
 		EditText e = (EditText) findViewById(R.id.numbers);
 		int cursorPosition = e.getSelectionStart();
-		e.setSelection(cursorPosition +1 );
+		
+		// dont try to trespass the end of the string
+		if (cursorPosition == e.getText().toString().length())
+			e.setSelection(cursorPosition);
+		else
+			e.setSelection(cursorPosition +1);
+
 	}
 
 	public void onClickHash (View v){
