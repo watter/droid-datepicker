@@ -49,9 +49,34 @@
     <string name="virgula">,</string>
     <string name="ponto">.</string>
     <string name="mais">+</string>
+    <string name="space"></string>
     <string name="igual">=</string>
     <string name="ok">OK</string>
     <string name="cerquilha">#</string>
-    <string name="left_square_curly_braces">[{</string>
+    <string name="title_activity_compact_number">NUMCOMP</string>
+    <string name="title_activity_special_number">SpecialNumberActivity</string>
+    <string name="hello_world">Hello world!</string>
 
+    <string name="less_than_minus">&lt;-</string>
+    <string name="minus_greather_than">-&gt;</string>
+    
+    <string name="botao_1e">1 !</string>
+    <string name="botao_2a">2 @</string>
+    <string name="botao_3c">3 #</string>
+    <string name="botao_4d">4 $</string>
+    <string name="botao_5p">5 %</string>
+    <string name="botao_6e">6 ^</string>
+    <string name="botao_7e">7 &amp;</string>
+    <string name="botao_8a">8 *</string>
+    <string name="botao_9p">9 (</string>
+    <string name="botao_0p">0 )</string>
+    <string name="botao_comma_less_than">, &lt;</string>
+    <string name="botao_period_greater_than">. &gt;</string>
+    <string name="left_square_curly_braces">[ {</string>
+    <string name="right_square_curly_braces">] }</string>
+    <string name="botao_div_question">/ ?</string>
+    <string name="botao_semi_colon">; :</string>
+    <string name="botao_equal_plus">= +</string>
+    <string name="botao_minus_underscore">- _</string>
+    <string name="backspace">backspace</string>
 </resources>

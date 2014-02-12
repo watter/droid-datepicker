@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
     }
 
     public void onClickNumber(View v){
-    	Intent intent = new Intent(this, FullNumberActivity.class);
+    	Intent intent = new Intent(this, SpecialNumberActivity.class);
     	startActivityForResult(intent, SELECT_NUMBER);
     }
 

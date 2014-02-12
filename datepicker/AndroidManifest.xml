@@ -44,18 +44,32 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="br.gov.pr.datepicker.MainActivity" />
         </activity>
+<!--         <activity -->
+<!--             android:name="br.gov.pr.datepicker.NumberActivity" -->
+<!--             android:label="@string/title_activity_number" -->
+<!--             android:parentActivityName="br.gov.pr.datepicker.MainActivity" -->
+<!--             android:theme="@android:style/Theme.Light" > -->
+<!--             <meta-data -->
+<!--                 android:name="android.support.PARENT_ACTIVITY" -->
+<!--                 android:value="br.gov.pr.datepicker.MainActivity" /> -->
+<!--         </activity> -->
+<!--         <activity -->
+<!--             android:name="br.gov.pr.datepicker.FullNumberActivity" -->
+<!--             android:label="@string/title_activity_full_number" -->
+<!--             android:parentActivityName="br.gov.pr.datepicker.MainActivity" -->
+<!--             android:theme="@android:style/Theme.Light" > -->
+<!--         </activity> -->
         <activity
-            android:name="br.gov.pr.datepicker.NumberActivity"
-            android:label="@string/title_activity_number"
-            android:parentActivityName="br.gov.pr.datepicker.MainActivity"
-            android:theme="@android:style/Theme.Light" >
+            android:name="br.gov.pr.datepicker.CompactNumberActivity"
+            android:label="@string/title_activity_compact_number"
+            android:parentActivityName="br.gov.pr.datepicker.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="br.gov.pr.datepicker.MainActivity" />
         </activity>
         <activity
-            android:name="br.gov.pr.datepicker.FullNumberActivity"
-            android:label="@string/title_activity_full_number" 
+            android:name="br.gov.pr.datepicker.SpecialNumberActivity"
+            android:label="@string/title_activity_special_number"
             android:parentActivityName="br.gov.pr.datepicker.MainActivity"
             android:theme="@android:style/Theme.Light">
             <meta-data
